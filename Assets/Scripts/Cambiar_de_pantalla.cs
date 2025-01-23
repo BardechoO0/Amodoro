@@ -19,9 +19,13 @@ public class Cambiar_de_pantalla : MonoBehaviour
         Confi.SetActive(true);
 
     }
-    // Update is called once per frame
-    void Update()
+    
+
+    public void Exit()
     {
-        
+        Application.Quit();
+
+
+
     }
 }

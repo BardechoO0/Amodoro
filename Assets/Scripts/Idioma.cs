@@ -1,6 +1,8 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Localization.Settings;
+
 
 public class Idioma : MonoBehaviour
 {
@@ -10,17 +12,18 @@ public class Idioma : MonoBehaviour
     public void idioma()
     {
 
-
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[Idiomas];
 
 
     }
     public void flecha_1()
     {
         Idiomas++;
-        if (Idiomas >= 2)
+        if (Idiomas >= 3)
         {
-            Idiomas = 1;
+            Idiomas = 2;
         }
+        idioma();
     }
 
     public void flecha_2()
@@ -30,6 +33,7 @@ public class Idioma : MonoBehaviour
         {
             Idiomas = 0;
         }
+        idioma();
     }
 
     
