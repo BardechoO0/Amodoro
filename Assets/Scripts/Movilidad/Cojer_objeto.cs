@@ -51,7 +51,7 @@ public class Cojer_objeto : MonoBehaviour
             if (Input.GetKeyDown(Tecla) && inHand == false)
             {
                 
-
+                x.GetComponent<Collider>().isTrigger = true;
                 x.GetComponent<Rigidbody>().useGravity = false;
                 x.transform.SetParent(mano);
 
@@ -63,6 +63,7 @@ public class Cojer_objeto : MonoBehaviour
             else if (Input.GetKeyDown(Tecla) && inHand == true) 
             
             {
+                x.GetComponent<Collider>().isTrigger = false;
                 x.GetComponent<Rigidbody>().useGravity = true;
                 x.transform.SetParent(null);
 
