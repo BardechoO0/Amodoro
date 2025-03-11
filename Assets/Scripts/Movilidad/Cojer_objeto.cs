@@ -12,6 +12,8 @@ public class Cojer_objeto : MonoBehaviour
     public KeyCode Tecla = KeyCode.E;
 
     public Vector2 h;
+
+    [SerializeField] Bandeja bj;
     void Start()
     {
         
@@ -24,6 +26,8 @@ public class Cojer_objeto : MonoBehaviour
             activo = true;
 
             x = collision.gameObject;
+
+            bj = x.GetComponent<Bandeja>();
 
             x.GetComponent<Rigidbody>();
 
@@ -38,6 +42,8 @@ public class Cojer_objeto : MonoBehaviour
             activo = false;
 
             x = null;
+
+            bj = null;
         }
 
         
@@ -50,8 +56,10 @@ public class Cojer_objeto : MonoBehaviour
 
             if (Input.GetKeyDown(Tecla) && inHand == false)
             {
-                
 
+                bj.Activ();
+
+                x.GetComponent<Collider>().isTrigger = true;
                 x.GetComponent<Rigidbody>().useGravity = false;
                 x.transform.SetParent(mano);
 
@@ -63,9 +71,12 @@ public class Cojer_objeto : MonoBehaviour
             else if (Input.GetKeyDown(Tecla) && inHand == true) 
             
             {
+                bj.DesActiv();
+
+                x.GetComponent<Collider>().isTrigger= false;
                 x.GetComponent<Rigidbody>().useGravity = true;
                 x.transform.SetParent(null);
-
+                bj = null;
                 inHand = false;
 
             }
@@ -75,6 +86,25 @@ public class Cojer_objeto : MonoBehaviour
                 x.transform.position = mano.position;
             }
 
+            if(bj.x.value == 1|| bj.x.value == -1)
+            {
+
+                x.GetComponent<Collider>().isTrigger = false;
+
+                x.GetComponent<Rigidbody>().useGravity = true;
+
+                x.transform.SetParent(null);
+
+                x.GetComponent<Rigidbody>().AddForce(new Vector3(0,1,1*bj.x.value)*5,ForceMode.Impulse);
+
+
+                bj.DesActiv();
+
+                bj = null;
+
+                x.gameObject.tag = "Fallo";
+                inHand = false;
+            }
             
         
         }
