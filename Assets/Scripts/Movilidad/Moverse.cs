@@ -7,11 +7,13 @@ public class Moverse : MonoBehaviour
 
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
+        transform.Rotate(0,Input.GetAxis("Mouse X")*2,0);
+
         float MoveX = Input.GetAxis("Horizontal");
         float MoveZ = Input.GetAxis("Vertical");
 
