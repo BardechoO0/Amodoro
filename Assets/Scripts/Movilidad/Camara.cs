@@ -14,5 +14,7 @@ public class Camara : MonoBehaviour
         transform.Rotate(-Input.GetAxis("Mouse Y") * 2, 0, 0);
 
         
+
+        
     }
 }

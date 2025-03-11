@@ -95,6 +95,8 @@ public class Cojer_objeto : MonoBehaviour
 
                 x.transform.SetParent(null);
 
+                bj.Errar();
+
                 x.GetComponent<Rigidbody>().AddForce(new Vector3(0,1,1*bj.x.value)*5,ForceMode.Impulse);
 
 
@@ -103,6 +105,9 @@ public class Cojer_objeto : MonoBehaviour
                 bj = null;
 
                 x.gameObject.tag = "Fallo";
+
+                
+
                 inHand = false;
             }
             

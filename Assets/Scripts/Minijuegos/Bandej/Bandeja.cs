@@ -6,6 +6,10 @@ public class Bandeja : MonoBehaviour
    
     [SerializeField]public Slider x;
 
+    [SerializeField] Instaciador IT;
+    [SerializeField] GameObject IN;
+    public bool Ins;
+
     public float Speed;
 
     public float CaidaSpeed;
@@ -17,6 +21,8 @@ public class Bandeja : MonoBehaviour
     public bool minijuegoActivo;
     void Start()
     {
+        Ins = false;
+
         x.maxValue = 1f; 
         
         x.minValue = -1f;
@@ -40,6 +46,12 @@ public class Bandeja : MonoBehaviour
         minijuegoActivo = false;
         x.value = 0f;
     }
+
+    public void Errar()
+    {
+        IT.fallaste();
+    }
+
     void Update()
     {
         if (minijuegoActivo)
@@ -70,6 +82,18 @@ public class Bandeja : MonoBehaviour
           
 
             transform.localRotation= Quaternion.Euler(45 * R, 0, 0);
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Insta")&&Ins==false)
+        {
+            IN = other.gameObject;
+
+            IT = IN.GetComponent<Instaciador>();
+
+            Ins = true;
+
         }
     }
 }
