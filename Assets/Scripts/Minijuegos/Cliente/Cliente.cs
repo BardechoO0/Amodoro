@@ -42,13 +42,13 @@ public class Cliente : MonoBehaviour
         }
         else if (IT[1].ocupado == false)
         {
-            IT[0].nombreTag = X;
+            IT[1].nombreTag = X;
             IT[1].Intanciador();
             R++;
         }
         else if (IT[2].ocupado == false)
         {
-            IT[0].nombreTag = X;
+            IT[2].nombreTag = X;
             IT[2].Intanciador();
             R++;
         }

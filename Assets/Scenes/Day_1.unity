@@ -1187,6 +1187,7 @@ GameObject:
   - component: {fileID: 1319138041}
   - component: {fileID: 1319138042}
   - component: {fileID: 1319138043}
+  - component: {fileID: 1319138044}
   m_Layer: 0
   m_Name: Intanciador_1
   m_TagString: Insta
@@ -1248,6 +1249,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 0.19}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1319138044
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319138040}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 0.19}
+  m_Center: {x: 0.82, y: 0, z: 1.04}
 --- !u!1 &1352444290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,6 +1283,8 @@ GameObject:
   - component: {fileID: 1352444293}
   - component: {fileID: 1352444292}
   - component: {fileID: 1352444291}
+  - component: {fileID: 1352444297}
+  - component: {fileID: 1352444296}
   m_Layer: 0
   m_Name: Cliente (2)
   m_TagString: Untagged
@@ -1287,7 +1311,7 @@ MonoBehaviour:
   - {fileID: 1506860139}
   cj: {fileID: 1865339077}
   R: 0
-  X: 
+  X: Guasa
 --- !u!136 &1352444292
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1380,6 +1404,48 @@ Transform:
   - {fileID: 1809327913}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1352444296
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352444290}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.04, y: 2, z: 1.93}
+  m_Center: {x: 1.19, y: 0, z: 0.51}
+--- !u!65 &1352444297
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352444290}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.95, y: 1.11, z: 1}
+  m_Center: {x: 0, y: 0, z: -1.17}
 --- !u!1 &1417208212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,6 +1585,7 @@ GameObject:
   - component: {fileID: 1595186797}
   - component: {fileID: 1595186796}
   - component: {fileID: 1595186801}
+  - component: {fileID: 1595186802}
   m_Layer: 0
   m_Name: Cliente (1)
   m_TagString: Untagged
@@ -1545,7 +1612,7 @@ MonoBehaviour:
   - {fileID: 1506860139}
   cj: {fileID: 1865339077}
   R: 0
-  X: Plato
+  X: Zamora
 --- !u!136 &1595186797
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1659,6 +1726,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.95, y: 1.11, z: 1}
   m_Center: {x: 0, y: 0, z: -1.17}
+--- !u!65 &1595186802
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595186795}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.04, y: 2, z: 1.93}
+  m_Center: {x: 1.19, y: 0, z: 0.51}
 --- !u!1 &1611624642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,6 +1976,7 @@ GameObject:
   - component: {fileID: 1634073802}
   - component: {fileID: 1634073803}
   - component: {fileID: 1634073804}
+  - component: {fileID: 1634073805}
   m_Layer: 0
   m_Name: Intanciador_2
   m_TagString: Insta
@@ -1949,6 +2038,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 0.19}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1634073805
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634073801}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 0.19}
+  m_Center: {x: 0.82, y: 0, z: 0.63}
 --- !u!1 &1656309883
 GameObject:
   m_ObjectHideFlags: 0
@@ -2607,6 +2717,8 @@ GameObject:
   - component: {fileID: 2067836149}
   - component: {fileID: 2067836148}
   - component: {fileID: 2067836152}
+  - component: {fileID: 2067836154}
+  - component: {fileID: 2067836153}
   m_Layer: 0
   m_Name: Cliente
   m_TagString: Untagged
@@ -2725,7 +2837,49 @@ MonoBehaviour:
   - {fileID: 1506860139}
   cj: {fileID: 1865339077}
   R: 0
-  X: 
+  X: Fuengirola
+--- !u!65 &2067836153
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067836147}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.04, y: 2, z: 1.93}
+  m_Center: {x: 1.19, y: 0, z: 0.51}
+--- !u!65 &2067836154
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067836147}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.95, y: 1.11, z: 1}
+  m_Center: {x: 0, y: 0, z: -1.17}
 --- !u!1 &2117650108
 GameObject:
   m_ObjectHideFlags: 0

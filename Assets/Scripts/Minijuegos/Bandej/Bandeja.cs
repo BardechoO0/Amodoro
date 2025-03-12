@@ -30,6 +30,8 @@ public class Bandeja : MonoBehaviour
         x.value = 0f;
 
         x.value += Random.Range(0.1f, -0.1f);
+
+        
     }
 
     public void Activ()
@@ -91,8 +93,10 @@ public class Bandeja : MonoBehaviour
             IN = other.gameObject;
 
             IT = IN.GetComponent<Instaciador>();
-
+            gameObject.tag = IT.nombreTag;
             Ins = true;
+
+            
 
         }
     }
