@@ -21,7 +21,7 @@ public class Cojer_objeto : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Plato" && inHand==false)
+        if (collision.gameObject.layer == 6 && inHand==false)
         {
             activo = true;
 
@@ -33,11 +33,13 @@ public class Cojer_objeto : MonoBehaviour
 
         }
 
+        
+
     }
 
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.gameObject.tag == "Plato" && inHand == false)
+        if (collision.gameObject.layer == 6 && inHand == false)
         {
             activo = false;
 
@@ -81,14 +83,12 @@ public class Cojer_objeto : MonoBehaviour
 
             }
 
-            if (inHand == true) 
-            {
-                x.transform.position = mano.position;
-            }
+           
 
             if(bj.x.value == 1|| bj.x.value == -1)
             {
 
+                
                 x.GetComponent<Collider>().isTrigger = false;
 
                 x.GetComponent<Rigidbody>().useGravity = true;
@@ -106,12 +106,16 @@ public class Cojer_objeto : MonoBehaviour
 
                 x.gameObject.tag = "Fallo";
 
-                
+                ckeker();
 
                 inHand = false;
             }
-            
-        
+
+
+            if (inHand == true)
+            {
+                x.transform.position = mano.position;
+            }
         }
         
     }

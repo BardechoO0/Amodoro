@@ -14,12 +14,18 @@ public class Cliente : MonoBehaviour
 
     public string X;
 
+    bool Dentro;
 
+    bool Servido;
+
+    bool sentado;
     void Start()
     {
-        IMG.SetActive(false);
+        Servido = false;
+        IMG.SetActive(true);
+        sentado = true;
 
-        llegar();
+        
 
         
     }
@@ -30,16 +36,19 @@ public class Cliente : MonoBehaviour
 
         if (IT[0].ocupado == false)
         {
-            IT[R].Intanciador();
+            IT[0].nombreTag = X;
+            IT[0].Intanciador();
             R++;
         }
         else if (IT[1].ocupado == false)
         {
+            IT[0].nombreTag = X;
             IT[1].Intanciador();
             R++;
         }
         else if (IT[2].ocupado == false)
         {
+            IT[0].nombreTag = X;
             IT[2].Intanciador();
             R++;
         }
@@ -50,23 +59,41 @@ public class Cliente : MonoBehaviour
 
 
     private void OnTriggerEnter(Collider other)
-    {
-        
-        if (other.gameObject.tag == "Plato") {
-        
-
-
-
-          Destroy(other.gameObject);
+    {   
+        if (other.gameObject.tag == X) {
 
             cj.x.transform.SetParent(null);
-            
-            cj.inHand = false;
 
+            cj.ckeker();
+
+
+
+
+            Destroy(other.gameObject);
+
+            
+
+        }
+
+        if(other.gameObject.tag == "Player")
+        {
+            Dentro = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Dentro = false;
         }
     }
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E)&& Dentro && !Servido && sentado) 
+        {
+            llegar();
+            Servido = true;
+        }
     }
 }

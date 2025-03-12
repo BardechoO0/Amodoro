@@ -8,14 +8,23 @@ public class Instaciador : MonoBehaviour
 
     public int N_orden;
 
+    public bool dentro;
+
+    public string nombreTag;
     private void OnTriggerEnter(Collider other)
     {
         
-        if( ocupado && Input.GetKey(KeyCode.E) && other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player"))
         {
-            print("j");
-            Instantiate(bandejas[N_orden], transform.position, Quaternion.identity);
-            ocupado = false;
+            dentro = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            dentro = false;
         }
     }
     void Start()
@@ -46,6 +55,12 @@ public class Instaciador : MonoBehaviour
     }
     void Update()
     {
-        
+        if (ocupado && Input.GetKey(KeyCode.E) && dentro)
+        {
+            print("j");
+            
+            Instantiate(bandejas[N_orden], transform.position, Quaternion.identity);
+            ocupado = false;
+        }
     }
 }
