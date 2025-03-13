@@ -66,7 +66,7 @@ public class Cliente : MonoBehaviour
 
             cj.ckeker();
 
-
+            cj.GG();
 
 
             Destroy(other.gameObject);

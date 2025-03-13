@@ -58,6 +58,10 @@ public class Bandeja : MonoBehaviour
         IT = null;
     }
 
+    public void Fin()
+    {
+        IT.badeja=false;
+    }
     void Update()
     {
         if (minijuegoActivo)

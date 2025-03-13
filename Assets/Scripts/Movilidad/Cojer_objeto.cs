@@ -21,7 +21,7 @@ public class Cojer_objeto : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.layer == 6 && inHand==false)
+        if (collision.gameObject.layer == 6  && inHand==false)
         {
             activo = true;
 
@@ -33,7 +33,17 @@ public class Cojer_objeto : MonoBehaviour
 
         }
 
-        
+        if (inHand == false)
+        {
+            if (collision.gameObject.layer == 7 || collision.gameObject.layer == 8 || collision.gameObject.layer == 9 || collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12 || collision.gameObject.layer ==14)
+            {
+                activo = true;
+
+                x = collision.gameObject;
+
+                x.GetComponent<Rigidbody>();
+            }
+        }
 
     }
 
@@ -48,7 +58,16 @@ public class Cojer_objeto : MonoBehaviour
             bj = null;
         }
 
-        
+        if (inHand == false)
+        {
+            if (collision.gameObject.layer == 7|| collision.gameObject.layer == 8|| collision.gameObject.layer == 9 || collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12 || collision.gameObject.layer == 14)
+            {
+                activo = false;
+
+                x = null;
+
+            }
+        }
 
     }
     void Update()
@@ -58,8 +77,8 @@ public class Cojer_objeto : MonoBehaviour
 
             if (Input.GetKeyDown(Tecla) && inHand == false)
             {
-
-                bj.Activ();
+                if(bj != null) { bj.Activ(); }
+                
 
                 x.GetComponent<Collider>().isTrigger = true;
                 x.GetComponent<Rigidbody>().useGravity = false;
@@ -73,7 +92,8 @@ public class Cojer_objeto : MonoBehaviour
             else if (Input.GetKeyDown(Tecla) && inHand == true) 
             
             {
-                bj.DesActiv();
+                if (bj != null) { bj.DesActiv(); }
+                
 
                 x.GetComponent<Collider>().isTrigger= false;
                 x.GetComponent<Rigidbody>().useGravity = true;
@@ -83,32 +103,35 @@ public class Cojer_objeto : MonoBehaviour
 
             }
 
-           
 
-            if(bj.x.value == 1|| bj.x.value == -1)
+            if (bj != null)
             {
-
-                
-                x.GetComponent<Collider>().isTrigger = false;
-
-                x.GetComponent<Rigidbody>().useGravity = true;
-
-                x.transform.SetParent(null);
-
-                bj.Errar();
-
-                x.GetComponent<Rigidbody>().AddForce(new Vector3(0,1,1*bj.x.value)*5,ForceMode.Impulse);
+                if (bj.x.value == 1 || bj.x.value == -1)
+                {
 
 
-                bj.DesActiv();
+                    x.GetComponent<Collider>().isTrigger = false;
 
-                bj = null;
+                    x.GetComponent<Rigidbody>().useGravity = true;
 
-                x.gameObject.tag = "Fallo";
+                    x.transform.SetParent(null);
 
-                ckeker();
+                    bj.Errar();
 
-                inHand = false;
+                    x.GetComponent<Rigidbody>().AddForce(new Vector3(0, 1, 1 * bj.x.value) * 5, ForceMode.Impulse);
+
+
+                    bj.DesActiv();
+
+                    bj = null;
+
+                    x.gameObject.tag = "Fallo";
+
+                    ckeker();
+
+                    inHand = false;
+                }
+
             }
 
 
@@ -127,5 +150,10 @@ public class Cojer_objeto : MonoBehaviour
         inHand = false;
 
 
+    }
+
+    public void GG()
+    {
+        bj.Fin();
     }
 }
