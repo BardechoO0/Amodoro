@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -52,6 +53,9 @@ public class Bandeja : MonoBehaviour
     public void Errar()
     {
         IT.fallaste();
+
+        IN = null;
+        IT = null;
     }
 
     void Update()
@@ -86,6 +90,8 @@ public class Bandeja : MonoBehaviour
             transform.localRotation= Quaternion.Euler(45 * R, 0, 0);
         }
     }
+
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Insta")&&Ins==false)

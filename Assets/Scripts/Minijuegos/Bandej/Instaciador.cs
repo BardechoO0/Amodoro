@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Instaciador : MonoBehaviour
@@ -10,10 +11,13 @@ public class Instaciador : MonoBehaviour
 
     public bool dentro;
 
+    public bool badeja;
+
     public string nombreTag;
     private void OnTriggerEnter(Collider other)
     {
         
+
         if(other.gameObject.CompareTag("Player"))
         {
             dentro = true;
@@ -25,6 +29,13 @@ public class Instaciador : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             dentro = false;
+        }
+
+        if (other.gameObject.layer == 6)
+        {
+
+            ocupado = false;
+
         }
     }
     void Start()
@@ -51,16 +62,30 @@ public class Instaciador : MonoBehaviour
 
     public void fallaste()
     {
-        Instantiate(bandejas[N_orden], transform.position, Quaternion.identity);
+        ocupado = true;
+        badeja = false;
+        pedio();
     }
+
+    IEnumerator pedio() 
+    {
+
+        badeja = true;
+
+        yield return new WaitForSeconds(3);
+
+        Instantiate(bandejas[N_orden], transform.position, Quaternion.identity);
+        
+
+    }
+
+    
     void Update()
     {
-        if (ocupado && Input.GetKey(KeyCode.E) && dentro)
+        if (ocupado && Input.GetKeyDown(KeyCode.E) && dentro&& !badeja)
         {
-            print("j");
             
-            Instantiate(bandejas[N_orden], transform.position, Quaternion.identity);
-            ocupado = false;
+            StartCoroutine(pedio());
         }
     }
 }
