@@ -1,4 +1,5 @@
 using UnityEditor.Localization.Plugins.XLIFF.V12;
+using UnityEditor.ShaderGraph.Drawing.Inspector.PropertyDrawers;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -29,8 +30,13 @@ public class Cliente : MonoBehaviour
     int N_R_2;
     int N_R_3;
 
+    //IA_cliente
+
+    [SerializeField] IA_clientes IC;
+
     void Start()
     {
+        IC = GetComponent<IA_clientes>();
         Servido = false;
         IMG.SetActive(true);
         sentado = true;
@@ -189,11 +195,16 @@ public class Cliente : MonoBehaviour
         {
             Dentro = true;
         }
+
+        if (other.gameObject.tag == "Porta")
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && IC.lugar2 == true)
         {
             Dentro = false;
         }
