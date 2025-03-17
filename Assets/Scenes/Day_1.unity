@@ -2031,6 +2031,7 @@ MonoBehaviour:
   zona: {fileID: 851767223}
   Cj: {fileID: 1865339077}
   R: 0
+  batir: 0
 --- !u!1 &737290321
 GameObject:
   m_ObjectHideFlags: 0
@@ -3053,7 +3054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39d3f031c5de44c438255dd701eef676, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 234.33
+      value: 232.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39d3f031c5de44c438255dd701eef676, type: 3}
       propertyPath: m_LocalPosition.z

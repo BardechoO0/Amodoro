@@ -35,7 +35,7 @@ public class Cliente : MonoBehaviour
         IMG.SetActive(true);
         sentado = true;
 
-
+        N_batido = 1;
         N_R_3 = Random.Range(0,6);
 
         if (N_R_3 == 0) {
@@ -63,16 +63,27 @@ public class Cliente : MonoBehaviour
 
         } else if (N_R_3 == 4){
 
+            comida=false;
+            BatidoCafe = true;
+            Agua = true;
+
         } else if (N_R_3 == 5){
 
+            comida = false;
+            BatidoCafe = false;
+            Agua = true;
+
         }else if (N_R_3 == 6) {
+            comida = false;
+            BatidoCafe = true;
+            Agua = false;
         }
     }
 
     public void llegar()
     {
         IMG.SetActive(true);
-
+        print("j");
         if (comida)
         {
             if (IT[0].ocupado == false)
@@ -98,7 +109,7 @@ public class Cliente : MonoBehaviour
                 print("pues ok");
             }
         }
-
+        print("j");
         if (BatidoCafe)
         {
             N_R_1 = Random.Range(0, 3);
@@ -125,6 +136,12 @@ public class Cliente : MonoBehaviour
 
 
         }
+
+        if (Agua)
+        {
+
+            Z = "Agua";
+        }
     }
 
 
@@ -138,6 +155,8 @@ public class Cliente : MonoBehaviour
 
             cj.GG();
 
+            comida =false;
+
             Destroy(other.gameObject);
 
         }
@@ -149,10 +168,21 @@ public class Cliente : MonoBehaviour
 
             cj.ckeker();
 
-            cj.GG();
+            BatidoCafe = false;
 
             Destroy(other.gameObject);
+        }
 
+        if (other.gameObject.layer == 7 && Z == "Agua")
+        {
+
+            cj.x.transform.SetParent(null);
+
+            cj.ckeker();
+
+            Agua = false;
+
+            Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "Player")
@@ -174,6 +204,11 @@ public class Cliente : MonoBehaviour
         {
             llegar();
             Servido = true;
+        }
+
+        if (!comida && !BatidoCafe && !Agua)
+        {
+            Destroy(gameObject);
         }
     }
 }

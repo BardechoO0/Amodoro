@@ -23,9 +23,12 @@ public class Batidos : MonoBehaviour
     [SerializeField] Cojer_objeto Cj;
 
     public int R;
+
+    public float batir;
+    bool Ingrediente_metido;
     void Start()
     {
-
+        batir = 0f;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -68,7 +71,7 @@ public class Batidos : MonoBehaviour
         }
     }
 
-    IEnumerator Time()
+    IEnumerator Times()
     {
         yield return new WaitForSeconds(0.1f);
         Vaso.transform.SetParent(zona);
@@ -83,17 +86,13 @@ public class Batidos : MonoBehaviour
         Cj.ckeker();
         Cj.x.transform.SetParent(null);
         Cj.x = null;
-
         R = Ingrediente.layer -10;
-
         Destroy(Ingrediente);
 
         yield return new WaitForSeconds(3f);
 
         Destroy(Vaso);
-
         Instantiate(Batido_final[R], zona.position, Quaternion.identity);
-
         IngredienteDentro = false;
     }
     void Update()
@@ -101,17 +100,39 @@ public class Batidos : MonoBehaviour
         if (personaDentro && vasoDentro && !vasoColocado && Input.GetKeyDown(KeyCode.E))
         {
 
-            StartCoroutine(Time());
+            StartCoroutine(Times());
             vasoColocado = true;
 
         }
 
-        if (personaDentro && vasoColocado && IngredienteDentro && Input.GetKeyDown(KeyCode.E))
+        if (personaDentro && vasoColocado && IngredienteDentro && Input.GetKeyDown(KeyCode.E)&&!Ingrediente_metido)
         {
 
-            StartCoroutine(Cafe());
+            
+
+            Cj.ckeker();
+            Cj.x.transform.SetParent(null);
+            Cj.x = null;
+            R = Ingrediente.layer - 10;
+            Destroy(Ingrediente);
+            Ingrediente_metido = true;
 
         }
 
+        if (Input.GetMouseButton(2)&&Ingrediente_metido&&personaDentro) 
+        {
+
+            batir += 1*Time.deltaTime;
+
+            if (batir > 4) 
+            {
+                Destroy(Vaso);
+                Instantiate(Batido_final[R], zona.position, Quaternion.identity);
+                IngredienteDentro = false;
+                Ingrediente_metido = false;
+                batir = 0;
+            }
+        
+        }
     }
 }
