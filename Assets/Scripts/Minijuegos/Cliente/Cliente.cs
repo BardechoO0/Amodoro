@@ -35,6 +35,10 @@ public class Cliente : MonoBehaviour
 
     [SerializeField] IA_clientes IC;
 
+    //dialogos
+
+    [SerializeField] dialogos dg;
+
     void Start()
     {
         IC = GetComponent<IA_clientes>();
@@ -87,18 +91,21 @@ public class Cliente : MonoBehaviour
             if (IT[0].ocupado == false && IT[0] != null )
             {
                 IT[0].nombreTag = X;
+                dg.X = X;
                 IT[0].Intanciador();
                 R++;
             }
             else if (IT[1] != null && IT[1].ocupado == false )
             {
                 IT[1].nombreTag = X;
+                dg.X = X;
                 IT[1].Intanciador();
                 R++;
             }
             else if (IT[2] != null && IT[2].ocupado == false)
             {
                 IT[2].nombreTag = X;
+                dg.X = X;
                 IT[2].Intanciador();
                 R++;
             }
@@ -114,20 +121,20 @@ public class Cliente : MonoBehaviour
 
             if (N_R_1 == 0) 
             {
-                Y = "Vaso_fresa";
-
+                Y = "Batido de fresa";
+                dg.Y = Y;
                 N_batido = 15;
 
             } else if (N_R_1 == 1) 
             {
-                Y = "Vaso_Chocolate";
-
+                Y = "Batido de chocolate";
+                dg.Y = Y;
                 N_batido = 17;
 
             } else if (N_R_1 == 2)
             {
-                Y = "Vaso_Macha";
-
+                Y = "Batido de Macha";
+                dg.Y = Y;
                 N_batido = 16;
 
             }
@@ -139,7 +146,10 @@ public class Cliente : MonoBehaviour
         {
 
             Z = "Agua";
+            dg.Z = Z;
         }
+
+        dg.Clin();
     }
 
 

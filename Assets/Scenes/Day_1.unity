@@ -463,6 +463,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119414909}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &135515569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 135515570}
+  - component: {fileID: 135515572}
+  - component: {fileID: 135515571}
+  m_Layer: 5
+  m_Name: Panel (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &135515570
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135515569}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 8.330856, y: 1.3822255, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1361511685}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &135515571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135515569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.44705883}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 2
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 3
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &135515572
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135515569}
+  m_CullTransparentMesh: 1
 --- !u!1001 &159282197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -523,6 +598,10 @@ PrefabInstance:
       propertyPath: cj
       value: 
       objectReference: {fileID: 1865339077}
+    - target: {fileID: 7887636142361551363, guid: 08fdea12c25498b4b87c77672001d255, type: 3}
+      propertyPath: dg
+      value: 
+      objectReference: {fileID: 860598381}
     - target: {fileID: 7887636142361551363, guid: 08fdea12c25498b4b87c77672001d255, type: 3}
       propertyPath: 'IT.Array.data[0]'
       value: 
@@ -1256,6 +1335,142 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 372c9c6e247926b4096db244361c8a88, type: 2}
   m_BuildHeightMesh: 0
+--- !u!1 &287621157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 287621160}
+  - component: {fileID: 287621159}
+  - component: {fileID: 287621158}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &287621158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287621157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 12
+  m_fontSizeBase: 12
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -248.27206, y: -16.90463, z: -256.88324, w: -26.986774}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &287621159
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287621157}
+  m_CullTransparentMesh: 1
+--- !u!224 &287621160
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287621157}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1361511685}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &294803836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1996,6 +2211,142 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f66539bbd74f06e46ba4332bf884f371, type: 3}
+--- !u!1 &589810529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 589810530}
+  - component: {fileID: 589810532}
+  - component: {fileID: 589810531}
+  m_Layer: 5
+  m_Name: Nombre
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &589810530
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589810529}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.55804, y: 0.55804, z: 0.55804}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1361511685}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -322, y: 43}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &589810531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589810529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Cliente
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &589810532
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589810529}
+  m_CullTransparentMesh: 1
 --- !u!1 &617972385
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,6 +3064,149 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860283547}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &860598380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860598382}
+  - component: {fileID: 860598381}
+  m_Layer: 0
+  m_Name: Dialogo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &860598381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860598380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f713709fc6e8a44af139944672d5bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClienteDialoge: {fileID: 287621158}
+  YoshiroDialoge: {fileID: 0}
+  AyaneDialoge: {fileID: 0}
+  UsugiDialoge: {fileID: 0}
+  KyokoDialoge: {fileID: 0}
+  ClienteObject: {fileID: 1361511684}
+  YoshiroObject: {fileID: 0}
+  AyaneObject: {fileID: 0}
+  UsugiObject: {fileID: 0}
+  KyokoObject: {fileID: 0}
+  tipo_1: 
+  X: 
+  Y: 
+  Z: 
+  Escena1_dialoge_1: "Sigo pensando que este trabajo no es el mejor que pod\xEDa
+    tener, pero el horario es muy bueno y el sueldo no est\xE1 tan mal comparado
+    con otros trabajos que he buscado. Adem\xE1s, \xBFc\xF3mo es que estos sitios
+    tienen tanta fama? Nunca lo entender\xE9, la \u2026"
+  Escena1_dialoge_2: "\xA1Bienvenida! \xBFUsagi, verdad? \xBFEst\xE1s lista para
+    tu primer d\xEDa? No te preocupes, te ense\xF1ar\xE9 todo lo que necesitas saber."
+  Escena1_dialoge_3: "Gracias por el recibimiento, s\xE9 que suena un poco pesimista,
+    pero estaba asustada\r\nde empezar a trabajar aqu\xED."
+  Escena1_dialoge_4: "Soy consciente que los Maid Caf\xE9 tienen mala fama y no puedo
+    negar que el ambiente muchas veces es inc\xF3modo con ciertos clientes, tienes
+    que saber cuidarse de ellos; la mayor\xEDa suele ser amable, pero alguno que
+    otro querr\xE1 sobrepasarse contigo, es por eso que yo prefiero estar en cocina
+    y tratar lo menos posible con la clientela, admiro a las que s\xED pueden estar
+    de cara al p\xFAblico. A\xFAn as\xED, este lugar suele ser tranquilo, no vienen
+    tantos clientes y seguro te las arreglas bien."
+  Escena1_dialoge_5: "Puede que este no sea el mejor lugar, pero de verdad necesitaba
+    el dinero que ofrecen, puedo con la presi\xF3n, no hay ning\xFAn problema."
+  Escena1_dialoge_6: "As\xED se habla, s\xE9 que lo har\xE1s perfecto, se nota que
+    eres muy buena. Cualquier problema que tengas, ven a hablar conmigo."
+  Escena1_dialoge_7: "Bien, empecemos con lo b\xE1sico. Para moverse, solo hace falta
+    que uses las teclas WASD: W para moverse hacia adelante, A hacia la izquierda,
+    S hacia atr\xE1s y D para la derecha."
+  Escena1_dialoge_8: "Esta es la zona de los batidos y caf\xE9s, situada justo al
+    lado de la cocina. Aqu\xED es donde preparar\xE1s los pedidos. Para hacer los
+    batidos, solo bastar\xE1 con ir al almac\xE9n; que te ense\xF1ar\xE9 m\xE1s tarde,
+    a por el ingrediente principal del batido que te pidan. Para pillar ingredientes,
+    objetos, etc. Pulsa la tecla \u201CE\u201D. Para dejarlo dentro de la batidora,
+    pulsa la tecla \u201CF\u201D, y para hacer el batido mant\xE9n \u201CRMB\u201D
+    hasta que salga todo, despu\xE9s d\xE9jalo en la bandeja. Lo mismo con la cafetera,
+    escoges el ingrediente necesario, lo a\xF1ades y mantienes hasta que est\xE9
+    listo, y lo dejas en la bandeja. Si te piden agua, est\xE1 en la nevera que tienes
+    debajo de la barra, y si te piden algo de comida no te preocupes, \xBFVes esa
+    ventanilla de\r\nah\xED? Yo estar\xE9 en la cocina, solo har\xE1 falta que con
+    RMB pulses la campanita. Cuando est\xE9 lista, te avisar\xE9 con esta misma y
+    te la dejar\xE9 ah\xED apoyada."
+  Escena1_dialoge_9: "Este es el comedor, donde atender\xE1s a los clientes a medida
+    que vayan llegando. Al tomarles el pedido, es importante saludarlos y que les
+    llames \u201Camo\u201D, \u201Cmi se\xF1or\u201D o como ellos quieran que les
+    digas. Se que suena raro, pero es lo que nos hace \xFAnicos. Adem\xE1s, debes
+    tener cuidado con no tardar en llevarles los pedidos."
+  Escena1_dialoge_10: "Lo \xFAltimo que tengo que ense\xF1arte es el almac\xE9n y
+    cuarto de empleados. Aqu\xED podr\xE1s pillar algunos de los ingredientes que
+    te har\xE1n falta, y el sitio donde tenemos las taquillas donde guardamos los
+    uniformes. Adem\xE1s tenemos un espejo para vernos antes de salir. \xBFSencillo,
+    verdad? Pues esta es tu taquilla, c\xE1mbiate y empecemos tu primer servicio."
+  Escena3_dialoge_1: "Bienvenido a Amodoro Maid Caf\xE9. \xBFQu\xE9 desea pedir amo?"
+  Escena3_dialoge_2: "\xA1Hola, mi nombre es Yoshiro, un gusto conocerte!"
+  Escena3_dialoge_3: ...
+  Escena3_dialoge_4: "\xBFQu\xE9 me recomiendas? Seguro que tienes muy buen gusto."
+  Escena3_dialoge_5: "La verdad es que es mi primer d\xEDa, a\xFAn no estoy familiarizada
+    con todo lo del men\xFA, pero estoy segura de que sea lo que sea que pidas va
+    a estar muy rico."
+  Escena3_dialoge_6: 
+  Escena3_dialoge_7: "\xBFPodr\xEDas traerme una caja de harina cuando acabes con
+    ese cliente, por favor? Est\xE1 en el almac\xE9n."
+  Escena3_dialoge_8: Muchas gracias preciosa.
+  Escena6_dialoge_1: "Hola, soy Usagi, empec\xE9 a trabajar ayer. Ayane no me hab\xEDa
+    dicho nada de otra compa\xF1era."
+  Escena6_dialoge_2: "Puede ser que se le olvidara, he tenido que estar ausente.
+    Por cierto, me llamo\r\nKyoko. Yo estoy en el escenario haciendo los shows. \xBFQu\xE9
+    te ha parecido tu primer d\xEDa?"
+  Escena6_dialoge_3: "Todo bien, ha sido m\xE1s tranquilo de lo que me esperaba,
+    aunque Ayane tiene raz\xF3n y hay algunos clientes extra\xF1os."
+  Escena6_dialoge_4: "Con el tiempo te acostumbrar\xE1s. Ayer de hecho vino un amigo
+    m\xEDo a tomar algo, probablemente lo atendiste, se llama Yoshiro, es muy buena
+    gente cuando lo conoces bien."
+  Escena6_dialoge_5: "Ahh\u2026 si\u2026 S\xED que lo atend\xED, seguro que se ve
+    buena gente\u2026"
+  Escena6_dialoge_6: "Veo que vosotras dos ya os hab\xE9is conocido. \xBFLista para
+    otro d\xEDa de esclavitud, Usagi? Bien pues a cambiarse que tenemos que empezar
+    el servicio."
+  Escena6_dialoge_7: "Ja, ja\u2026 Muy graciosa, Ayane."
+  Escena6_dialoge_8: "Veo que no me has querido escribir\u2026 No pasa nada guapa,
+    para que no te de verg\xFCenza te traje un peque\xF1o regalito."
+  Escena6_dialoge_9: No creo que sea correcto aceptar regalos de mis clientes.
+  Escena6_dialoge_10: "No te preocupes, pero a la pr\xF3xima puedes escribirme sin
+    miedo guapa."
+  Escena6_dialoge_11: "\xBFQu\xE9 quieres pedir, mi se\xF1or?"
+  Escena6_dialoge_12: Quiero una MofuMofu Carrot y dos botellas de agua por favor,
+    preciosa.
+  Escena6_dialoge_13: "Enseguida. Nos vamos detr\xE1s del mostrador y le pasamos
+    las ordenes a Ayane."
+  Escena6_dialoge_14: "\xBFPodr\xEDas traerme una caja de huevos del dep\xF3sito
+    cuando termines all\xED, por favor?\r\nHoy el d\xEDa est\xE1 m\xE1s ajetreado
+    que ayer."
+--- !u!4 &860598382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860598380}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 864.3854, y: 775.4794, z: 1292.4686}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &869104839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3883,6 +4377,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 470756154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1361511684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1361511685}
+  m_Layer: 5
+  m_Name: Clientes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1361511685
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361511684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1714803728}
+  - {fileID: 135515570}
+  - {fileID: 287621160}
+  - {fileID: 589810530}
+  m_Father: {fileID: 1751134258}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -159}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1417208212
 GameObject:
   m_ObjectHideFlags: 0
@@ -4802,6 +5335,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1714803727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1714803728}
+  - component: {fileID: 1714803730}
+  - component: {fileID: 1714803729}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1714803728
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714803727}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 9.160701, y: 1.3822255, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1361511685}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1714803729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714803727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.44705883}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1714803730
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714803727}
+  m_CullTransparentMesh: 1
 --- !u!1 &1751134254
 GameObject:
   m_ObjectHideFlags: 0
@@ -4879,7 +5487,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -4897,6 +5505,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1660281336}
+  - {fileID: 1361511685}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5893,3 +6502,4 @@ SceneRoots:
   - {fileID: 159282197}
   - {fileID: 513978712}
   - {fileID: 886094989}
+  - {fileID: 860598382}

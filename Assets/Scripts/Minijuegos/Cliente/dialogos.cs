@@ -5,10 +5,22 @@ using UnityEngine;
 
 public class dialogos : MonoBehaviour
 {
-    [SerializeField] TextMeshPro clienteDialoge;
-    [SerializeField] TextMeshPro YoshiroDialoge;
-    [SerializeField] TextMeshPro AyaneDialoge;
-    [SerializeField] TextMeshPro UsugiDialoge;
+
+     
+
+    //textos personajes
+    [SerializeField] TextMeshProUGUI ClienteDialoge;
+    [SerializeField] TextMeshProUGUI YoshiroDialoge;
+    [SerializeField] TextMeshProUGUI AyaneDialoge;
+    [SerializeField] TextMeshProUGUI UsugiDialoge;
+    [SerializeField] TextMeshProUGUI KyokoDialoge;
+
+    //Gameobje personajes
+    [SerializeField] GameObject ClienteObject;
+    [SerializeField] GameObject YoshiroObject;
+    [SerializeField] GameObject AyaneObject;
+    [SerializeField] GameObject UsugiObject;
+    [SerializeField] GameObject KyokoObject;
 
 
     // Dialogos clientes
@@ -69,14 +81,29 @@ public class dialogos : MonoBehaviour
 
     void Start()
     {
-        tipo_1 = X + Y + Z +"por favor.";
-
-        tipo_1 = "Has tardado mucho. Me gustaría" + X + Y + Z;
+        
 
         Escena3_dialoge_6 = "Pues ponme" + X + Y + Z + ", por favor preciosa.";
     }
 
-    // Update is called once per frame
+    public void Clin()
+    {
+        int R = Random.Range(0, 2);
+
+        if (R == 0) 
+        {
+            tipo_1 = X + Y + Z + "por favor.";
+            ClienteDialoge.text = tipo_1;
+        }else if (R == 1) 
+        { 
+            tipo_1 = "Has tardado mucho. Me gustaría" + X + Y + Z;
+        }
+
+        ClienteObject.SetActive(true);
+
+
+
+    }
     void Update()
     {
         
