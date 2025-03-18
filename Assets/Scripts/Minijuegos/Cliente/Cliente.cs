@@ -194,9 +194,7 @@ public class Cliente : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Dentro = true;
-        }
-
-        if (other.gameObject.tag == "Porta")
+        }else if (other.gameObject.tag == "Porta")
         {
             Destroy(gameObject);
         }
