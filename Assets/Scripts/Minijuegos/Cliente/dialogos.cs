@@ -59,7 +59,13 @@ public class dialogos : MonoBehaviour
 
     //Conversacion 2 Escena 6 
 
-    public string Escena6_dialoge_8 = "";
+    public string Escena6_dialoge_8 = "Veo que no me has querido escribir… No pasa nada guapa, para que no te de vergüenza te traje un pequeño regalito.";
+    public string Escena6_dialoge_9 = "No creo que sea correcto aceptar regalos de mis clientes.";
+    public string Escena6_dialoge_10 = "No te preocupes, pero a la próxima puedes escribirme sin miedo guapa.";
+    public string Escena6_dialoge_11 = "¿Qué quieres pedir, mi señor?";
+    public string Escena6_dialoge_12 = "Quiero una MofuMofu Carrot y dos botellas de agua por favor, preciosa.";
+    public string Escena6_dialoge_13 = "Enseguida. Nos vamos detrás del mostrador y le pasamos las ordenes a Ayane.";
+    public string Escena6_dialoge_14 = "¿Podrías traerme una caja de huevos del depósito cuando termines allí, por favor?\r\nHoy el día está más ajetreado que ayer.";
 
     void Start()
     {

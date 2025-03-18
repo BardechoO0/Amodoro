@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEditor.ShaderGraph.Drawing.Inspector.PropertyDrawers;
 using UnityEngine;
@@ -38,11 +39,11 @@ public class Cliente : MonoBehaviour
     {
         IC = GetComponent<IA_clientes>();
         Servido = false;
-        IMG.SetActive(true);
-        sentado = true;
+        IMG.SetActive(false);
+        sentado = false;
 
         N_batido = 1;
-        N_R_3 = Random.Range(0,6);
+        N_R_3 = Random.Range(0, 5);
 
         if (N_R_3 == 0) {
 
@@ -52,38 +53,29 @@ public class Cliente : MonoBehaviour
 
         } else if (N_R_3 == 1) {
             comida = true;
-            BatidoCafe= true;
+            BatidoCafe = true;
             Agua = false;
         }
         else if (N_R_3 == 2)
         {
             comida = true;
-            BatidoCafe= false;
+            BatidoCafe = false;
             Agua = false;
 
-        } else if (N_R_3 == 3){
+        } else if (N_R_3 == 3) {
 
             comida = true;
             BatidoCafe = false;
             Agua = false;
 
-        } else if (N_R_3 == 4){
+        } else if (N_R_3 == 4) {
 
-            comida=false;
+            comida = false;
             BatidoCafe = true;
             Agua = true;
 
-        } else if (N_R_3 == 5){
-
-            comida = false;
-            BatidoCafe = false;
-            Agua = true;
-
-        }else if (N_R_3 == 6) {
-            comida = false;
-            BatidoCafe = true;
-            Agua = false;
-        }
+        } 
+        
     }
 
     public void llegar()
@@ -92,19 +84,19 @@ public class Cliente : MonoBehaviour
         print("j");
         if (comida)
         {
-            if (IT[0].ocupado == false)
+            if (IT[0].ocupado == false && IT[0] != null )
             {
                 IT[0].nombreTag = X;
                 IT[0].Intanciador();
                 R++;
             }
-            else if (IT[1].ocupado == false)
+            else if (IT[1] != null && IT[1].ocupado == false )
             {
                 IT[1].nombreTag = X;
                 IT[1].Intanciador();
                 R++;
             }
-            else if (IT[2].ocupado == false)
+            else if (IT[2] != null && IT[2].ocupado == false)
             {
                 IT[2].nombreTag = X;
                 IT[2].Intanciador();
@@ -153,7 +145,7 @@ public class Cliente : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {   
-        if (other.gameObject.tag == X) {
+        if (other.gameObject.tag == X && Servido && comida) {
 
             cj.x.transform.SetParent(null);
 
@@ -167,7 +159,7 @@ public class Cliente : MonoBehaviour
 
         }
 
-        if (other.gameObject.layer == N_batido)
+        if (other.gameObject.layer == N_batido && Servido && BatidoCafe)
         {
 
             cj.x.transform.SetParent(null);
@@ -179,7 +171,7 @@ public class Cliente : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.gameObject.layer == 7 && Z == "Agua")
+        if (other.gameObject.layer == 7 && Z == "Agua" && Servido && Agua)
         {
 
             cj.x.transform.SetParent(null);
@@ -191,10 +183,11 @@ public class Cliente : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && sentado)
         {
             Dentro = true;
-        }else if (other.gameObject.tag == "Porta")
+        }
+        if (other.gameObject.tag == "Porta" && IC.lugar2 == true)
         {
             Destroy(gameObject);
         }
@@ -202,7 +195,7 @@ public class Cliente : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player" && IC.lugar2 == true)
+        if (other.gameObject.tag == "Player")
         {
             Dentro = false;
         }
@@ -217,7 +210,20 @@ public class Cliente : MonoBehaviour
 
         if (!comida && !BatidoCafe && !Agua)
         {
-            Destroy(gameObject);
+            print("j");
+            StartCoroutine(comer(1));
         }
+
+        if(IC.lugar2 == false && IC.lugar1 == false)
+        {
+            sentado = true;
+            IMG.SetActive(true);
+        }
+    }
+
+    IEnumerator comer(int t)
+    {
+        yield return new WaitForSeconds(t);
+        IC.lugar2 = true;
     }
 }

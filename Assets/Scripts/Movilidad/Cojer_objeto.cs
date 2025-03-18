@@ -14,9 +14,11 @@ public class Cojer_objeto : MonoBehaviour
     public Vector2 h;
 
     [SerializeField] Bandeja bj;
+
+    public bool Minijuego;
     void Start()
     {
-        
+        Minijuego = false;
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -24,7 +26,7 @@ public class Cojer_objeto : MonoBehaviour
         if (collision.gameObject.layer == 6  && inHand==false)
         {
             activo = true;
-
+            Minijuego = true;
             x = collision.gameObject;
 
             bj = x.GetComponent<Bandeja>();
@@ -52,7 +54,7 @@ public class Cojer_objeto : MonoBehaviour
         if (collision.gameObject.layer == 6 && inHand == false)
         {
             activo = false;
-
+            Minijuego = false;
             x = null;
 
             bj = null;
@@ -89,7 +91,7 @@ public class Cojer_objeto : MonoBehaviour
                 
 
             }
-            else if (Input.GetKeyDown(Tecla) && inHand == true) 
+            else if (Input.GetKeyDown(Tecla) && inHand == true && Minijuego == false) 
             
             {
                 if (bj != null) { bj.DesActiv(); }
@@ -111,24 +113,18 @@ public class Cojer_objeto : MonoBehaviour
 
 
                     x.GetComponent<Collider>().isTrigger = false;
-
                     x.GetComponent<Rigidbody>().useGravity = true;
-
+                    Minijuego = false;
                     x.transform.SetParent(null);
 
                     bj.Errar();
-
                     x.GetComponent<Rigidbody>().AddForce(new Vector3(0, 1, 1 * bj.x.value) * 5, ForceMode.Impulse);
 
 
                     bj.DesActiv();
-
                     bj = null;
-
                     x.gameObject.tag = "Fallo";
-
                     ckeker();
-
                     inHand = false;
                 }
 
@@ -139,16 +135,18 @@ public class Cojer_objeto : MonoBehaviour
             {
                 x.transform.position = mano.position;
             }
+            
         }
         
     }
+ 
 
     public void ckeker() 
     {
 
         activo = false;
         inHand = false;
-
+        Minijuego = false;
 
     }
 
