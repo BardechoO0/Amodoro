@@ -1911,6 +1911,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  NClientes: 2
 --- !u!65 &377995851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3093,6 +3094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f713709fc6e8a44af139944672d5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Mv: {fileID: 2126664293}
   ClienteDialoge: {fileID: 287621158}
   YoshiroDialoge: {fileID: 0}
   AyaneDialoge: {fileID: 0}
@@ -3104,6 +3106,7 @@ MonoBehaviour:
   UsugiObject: {fileID: 0}
   KyokoObject: {fileID: 0}
   tipo_1: 
+  Convers_1: 0
   X: 
   Y: 
   Z: 
@@ -6457,6 +6460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  Stop: 0
 --- !u!54 &2126664294
 Rigidbody:
   m_ObjectHideFlags: 0

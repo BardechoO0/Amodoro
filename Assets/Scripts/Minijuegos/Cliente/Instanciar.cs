@@ -17,6 +17,7 @@ public class Instanciar : MonoBehaviour
 
     [SerializeField] GameObject[] Clientes2;
 
+    public int NClientes;
     private void OnTriggerEnter(Collider other)
     {
         
@@ -39,7 +40,7 @@ public class Instanciar : MonoBehaviour
     IEnumerator ZaWardo()
     {
 
-        for (int i = 0; i < Asientos.Length; i++)
+        for (int i = 0; i < NClientes; i++)
         {
             yield return new WaitForSeconds(Random.Range(0.5f,10f));
             R = Random.Range(0, Cliente.Length);

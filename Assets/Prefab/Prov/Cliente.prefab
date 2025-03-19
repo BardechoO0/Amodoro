@@ -140,6 +140,7 @@ MonoBehaviour:
   BatidoCafe: 0
   Agua: 0
   IC: {fileID: 0}
+  dg: {fileID: 0}
 --- !u!65 &3055750811351408731
 BoxCollider:
   m_ObjectHideFlags: 0
