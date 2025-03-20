@@ -16,6 +16,8 @@ public class IA_clientes : MonoBehaviour
 
     public bool lugar2;
 
+    public bool lugar3;
+
     private Coroutine detectionCoroutine;
 
     void Start()
@@ -24,21 +26,34 @@ public class IA_clientes : MonoBehaviour
         //animator = GetComponent<Animator>();
         lugar1 = true;
         lugar2 = false;
+        lugar3 = false;
     }
 
     void Update()
     {
         if (lugar1 && !lugar2)
         {
-            agent.SetDestination(objetivo.position);
+            if (!lugar3)
+            {
+                agent.SetDestination(objetivo.position);
+               
+                lugar3 = true;
+            }
+        
 
-        }else if (!lugar1 && !lugar2) 
+        }
+        else if (!lugar1 && !lugar2)
         {
-            transform.LookAt(new Vector3(Mirar.position.x,Mirar.position.y,0));
+            transform.LookAt(new Vector3(Mirar.position.x, Mirar.position.y, 0));
         }
         else if (!lugar1 && lugar2)
         {
             agent.SetDestination(objetivo2.position);
+        }
+        else
+        {
+            agent.SetDestination(objetivo.position);
+
         }
 
         if (new Vector3(objetivo.position.x,0,objetivo.position.z) == new Vector3(transform.position.x, 0, transform.position.z))

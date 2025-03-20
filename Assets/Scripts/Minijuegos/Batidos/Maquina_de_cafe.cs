@@ -32,7 +32,7 @@ public class Maquina_de_cafe : MonoBehaviour
         {
             personaDentro = true;
         }
-        if (other.gameObject.layer == 8 && !vasoColocado) 
+        if (other.gameObject.layer == 18 && !vasoColocado) 
         {
          vasoDentro = true;
 

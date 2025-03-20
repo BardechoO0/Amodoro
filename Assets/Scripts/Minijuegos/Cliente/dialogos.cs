@@ -11,6 +11,7 @@ public class dialogos : MonoBehaviour
 
     // Lugar para Ayane
     [SerializeField] IA_basica IB;
+    [SerializeField] GameObject AY;
     [SerializeField] Transform[] obj;
 
     //textos personajes
@@ -200,79 +201,119 @@ public class dialogos : MonoBehaviour
          Mv.Stop = false;
         }
 
-        if (Convers_2 && pagina == 0)
+        if (Convers_2)
         {
-            IB.objetivo = obj[0];
-            UsugiDialoge.text = Escena1_dialoge_1;
-            UsugiObject.SetActive(true);
-            pagina++;
-            Mv.Stop = true;
-        }else if (Convers_2 && new Vector3 (IB.transform.position.x,0,IB.transform.position.z) == new Vector3(obj[0].transform.position.x,0, obj[0].transform.position.z) && pagina == 1)
-        {
+            if (Convers_2 && pagina == 0)
+            {
+                IB.objetivo = obj[0];
+                UsugiDialoge.text = Escena1_dialoge_1;
+                UsugiObject.SetActive(true);
+                pagina++;
+                Mv.Stop = true;
+            }
+            else if (Convers_2 && new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[0].transform.position.x, 0, obj[0].transform.position.z) && pagina == 1)
+            {
 
-            UsugiObject.SetActive(false);
-            AyaneDialoge.text = Escena1_dialoge_2;
-            AyaneObject.SetActive(true);
-            pagina++;
+                UsugiObject.SetActive(false);
+                AyaneDialoge.text = Escena1_dialoge_2;
+                AyaneObject.SetActive(true);
+                pagina++;
 
-        }else if (Convers_2 && pagina == 2 && Input.GetKeyUp(KeyCode.Space))
-        {
-            AyaneObject.SetActive (false);
-            UsugiDialoge.text= Escena1_dialoge_3;
-            UsugiObject.SetActive (true);
-            pagina++;
-        }else if (Convers_2 && pagina == 3 && Input.GetKeyUp(KeyCode.Space))
-        {
-            UsugiObject.SetActive(false);
-            AyaneDialoge.text = Escena1_dialoge_4;
-            AyaneObject.SetActive(true);
-            pagina++;
-        }else if (Convers_2 && pagina == 4 && Input.GetKeyUp(KeyCode.Space))
-        {
-            AyaneObject.SetActive(false);
-            UsugiDialoge.text = Escena1_dialoge_5;
-            UsugiObject.SetActive(true);
-            pagina++;
-        }else if (Convers_2 && pagina == 5 && Input.GetKeyUp(KeyCode.Space))
-        {
-            UsugiObject.SetActive(false);
-            AyaneDialoge.text = Escena1_dialoge_6;
-            AyaneObject.SetActive(true);
-            pagina++;
-        }else if (Convers_2 && pagina == 6 && Input.GetKeyUp(KeyCode.Space))
-        {
-            AyaneDialoge.text = Escena1_dialoge_7;
-            pagina++;
-            Mv.Stop = false;
-        }else if (Convers_2 && pagina == 7 && Input.GetKeyUp(KeyCode.W))
-        {
-            AyaneDialoge.text = Escena1_dialoge_7_2;
-            pagina++;
-            IB.objetivo = obj[1];
-        }else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[1].transform.position.x, 0, obj[1].transform.position.z) && Convers_2 && pagina == 8)
-        {
-            AyaneDialoge.text = Escena1_dialoge_8;
-            pagina++;
-            
-        } else if ((Convers_2 && pagina == 9 && Input.GetKeyUp(KeyCode.Space)))
-        {
+            }
+            else if (Convers_2 && pagina == 2 && Input.GetKeyUp(KeyCode.Space))
+            {
+                AyaneObject.SetActive(false);
+                UsugiDialoge.text = Escena1_dialoge_3;
+                UsugiObject.SetActive(true);
+                pagina++;
+            }
+            else if (Convers_2 && pagina == 3 && Input.GetKeyUp(KeyCode.Space))
+            {
+                UsugiObject.SetActive(false);
+                AyaneDialoge.text = Escena1_dialoge_4;
+                AyaneObject.SetActive(true);
+                pagina++;
+            }
+            else if (Convers_2 && pagina == 4 && Input.GetKeyUp(KeyCode.Space))
+            {
+                AyaneObject.SetActive(false);
+                UsugiDialoge.text = Escena1_dialoge_5;
+                UsugiObject.SetActive(true);
+                pagina++;
+            }
+            else if (Convers_2 && pagina == 5 && Input.GetKeyUp(KeyCode.Space))
+            {
+                UsugiObject.SetActive(false);
+                AyaneDialoge.text = Escena1_dialoge_6;
+                AyaneObject.SetActive(true);
+                pagina++;
+            }
+            else if (Convers_2 && pagina == 6 && Input.GetKeyUp(KeyCode.Space))
+            {
+                AyaneDialoge.text = Escena1_dialoge_7;
+                pagina++;
+                Mv.Stop = false;
+            }
+            else if (Convers_2 && pagina == 7 && Input.GetKeyUp(KeyCode.W))
+            {
+                AyaneDialoge.text = Escena1_dialoge_7_2;
+                pagina++;
+                IB.objetivo = obj[1];
+            }
+            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[1].transform.position.x, 0, obj[1].transform.position.z) && Convers_2 && pagina == 8)
+            {
+                AyaneDialoge.text = Escena1_dialoge_8;
+                pagina++;
 
-            IB.objetivo = obj[2];
-            AyaneDialoge.text = Escena1_dialoge_8_2;
-            pagina++;
-        }else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[2].transform.position.x, 0, obj[2].transform.position.z) && Convers_2 && pagina == 10)
-        {
-            AyaneDialoge.text = Escena1_dialoge_9;
-            pagina++;
-        }else if (Convers_2 && pagina == 11 && Input.GetKeyUp(KeyCode.Space))
-        {
-            IB.objetivo = obj[3];
-            AyaneDialoge.text = Escena1_dialoge_9_2;
-            pagina++;
-        }else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[3].transform.position.x, 0, obj[3].transform.position.z) && Convers_2 && pagina == 12)
-        {
-            AyaneDialoge.text = Escena1_dialoge_10;
-            pagina++;
+            }
+            else if ((Convers_2 && pagina == 9 && Input.GetKeyUp(KeyCode.Space)))
+            {
+
+                IB.objetivo = obj[2];
+                AyaneDialoge.text = Escena1_dialoge_8_2;
+                pagina++;
+            }
+            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[2].transform.position.x, 0, obj[2].transform.position.z) && Convers_2 && pagina == 10)
+            {
+                AyaneDialoge.text = Escena1_dialoge_9;
+                pagina++;
+            }
+            else if (Convers_2 && pagina == 11 && Input.GetKeyUp(KeyCode.Space))
+            {
+                IB.objetivo = obj[3];
+                AyaneDialoge.text = Escena1_dialoge_9_2;
+                pagina++;
+            }
+            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[3].transform.position.x, 0, obj[3].transform.position.z) && Convers_2 && pagina == 12)
+            {
+                AyaneDialoge.text = Escena1_dialoge_10;
+                pagina++;
+            }
+            else if (Convers_2 && pagina == 13 && Input.GetKeyUp(KeyCode.Space))
+            {
+                AyaneObject.SetActive(false);
+                IB.objetivo = obj[4];
+                pagina++;
+            }
+            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[4].transform.position.x, 0, obj[4].transform.position.z) && Convers_2 && pagina == 14)
+            {
+                
+                IB.objetivo = obj[5];
+                
+                IB.transform.position = obj[5].position;
+
+                AY.transform.position = obj[5].transform.position;
+
+                IB = null;
+                Destroy(AY);
+                
+                pagina++;
+            }
+            else if (Convers_2 && pagina == 15)
+            {
+                Convers_2 = false; pagina = 0;
+            }
+
         }
     }
 }

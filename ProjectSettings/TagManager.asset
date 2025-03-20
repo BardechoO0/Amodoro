@@ -7,15 +7,14 @@ TagManager:
   - Plato
   - Fallo
   - Insta
-  - Zamora
-  - Fuengirola
-  - Guasa
   - Vaso_cafe
   - Vaso_fresa
   - Vaso_Macha
   - Vaso_Chocolate
   - Cliente
   - Porta
+  - Sakura Pie
+  - Carrot Cake
   layers:
   - Default
   - TransparentFX
@@ -35,7 +34,7 @@ TagManager:
   - Vaso_fresa
   - Vaso_Macha
   - Vaso_Chocolate
-  - 
+  - Taza
   - 
   - 
   - 

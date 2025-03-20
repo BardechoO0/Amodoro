@@ -52,7 +52,9 @@ public class Instanciar : MonoBehaviour
                 ocupado[W] = true;
 
                 Clientes2[W] = Instantiate(Cliente[R], transform.position, Quaternion.identity);
+                
                 Clientes2[W].GetComponent<IA_clientes>().objetivo = Asientos[W].transform;
+                
                 Clientes2[W].GetComponent<IA_clientes>().Mirar = Mirar[W].transform;
 
 
