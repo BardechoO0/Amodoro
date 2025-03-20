@@ -1,12 +1,19 @@
+using System.Collections;
 using NUnit.Framework;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UIElements;
 
 public class dialogos : MonoBehaviour
 {
+    //permitir salir
 
+    public bool Salir;
+
+    // Imagenes
+    [SerializeField] GameObject Nota_Yoshiro;
     //Dias
     public bool dia_1;
     //Parar, moviniento
@@ -41,10 +48,23 @@ public class dialogos : MonoBehaviour
     [SerializeField] public string Y;
     [SerializeField] public string Z;
 
-    //Conversacion Escena 1
+    //Dialogos hitgun
+    public bool S;
+    public bool T;
+
+    //Conver_Yoriro
+    public bool Yoshiro_1;
+    public bool Yoshi_D_1;
+    public bool Yoshiro_2;
+    public bool Yoshi_D_2;
+
+    //Conversacion
     int pagina;
     public bool Convers_2;
 
+    public bool leer;
+    
+    
     string Escena1_dialoge_1 = "Sigo pensando que este trabajo no es el mejor que podía tener, pero el horario es muy bueno y el sueldo no está tan mal comparado con otros trabajos que he buscado. Además, ¿cómo es que estos sitios tienen tanta fama? Nunca lo entenderé, la …";
     string Escena1_dialoge_2 = "¡Bienvenida! ¿Usagi, verdad? ¿Estás lista para tu primer día? No te preocupes, te enseñaré todo lo que necesitas saber.";
     string Escena1_dialoge_3 = "Gracias por el recibimiento, sé que suena un poco pesimista, pero estaba asustada de empezar a trabajar aquí.";
@@ -61,18 +81,25 @@ public class dialogos : MonoBehaviour
 
     string Escena1_dialoge_9_2 = "";
     string Escena1_dialoge_10 = "Lo último que tengo que enseñarte es el almacén y cuarto de empleados. Aquí podrás pillar algunos de los ingredientes que te harán falta, y el sitio donde tenemos las taquillas donde guardamos los uniformes. Además tenemos un espejo para vernos antes de salir. ¿Sencillo, verdad? Pues esta es tu taquilla, cámbiate y empecemos tu primer servicio.";
-
+    
 
     // Conversacion Escena 3
-    public string Escena3_dialoge_1 = "Bienvenido a Amodoro Maid Café. ¿Qué desea pedir amo?";
-    public string Escena3_dialoge_2 = "¡Hola, mi nombre es Yoshiro, un gusto conocerte!";
-    public string Escena3_dialoge_3 = "...";
-    public string Escena3_dialoge_4 = "¿Qué me recomiendas? Seguro que tienes muy buen gusto.";
-    public string Escena3_dialoge_5 = "La verdad es que es mi primer día, aún no estoy familiarizada con todo lo del menú, pero estoy segura de que sea lo que sea que pidas va a estar muy rico.";
-    public string Escena3_dialoge_6;
-    public string Escena3_dialoge_7 = "¿Podrías traerme una caja de harina cuando acabes con ese cliente, por favor? Está en el almacén.";
-    public string Escena3_dialoge_8 = "Muchas gracias preciosa.";
-
+    string Escena3_dialoge_1 = "Bienvenido a Amodoro Maid Café. ¿Qué desea pedir amo?";
+    string Escena3_dialoge_2 = "¡Hola, mi nombre es Yoshiro, un gusto conocerte!";
+    string Escena3_dialoge_3 = "...";
+    string Escena3_dialoge_4 = "¿Qué me recomiendas? Seguro que tienes muy buen gusto.";
+    string Escena3_dialoge_5 = "La verdad es que es mi primer día, aún no estoy familiarizada con todo lo del menú, pero estoy segura de que sea lo que sea que pidas va a estar muy rico.";
+    string Escena3_dialoge_6;
+    string Escena3_dialoge_7 = "Usagi, ¿Podrías traerme una caja de harina cuando acabes con ese cliente, por favor? Está en el almacén.";
+    string Escena3_dialoge_8 = "Muchas gracias preciosa, toma esto de mi parte.";
+    public string Escena3_dialoge_9 = "Ya ha acabado tu turno, hoy termino yo de limpiar las mesas";
+    public string Escena3_dialoge_10 = "Ah, muchas gracias";
+    string Escena3_dialoge_11 = "¿Que estas mirando con tanta impetu?";
+    string Escena3_dialoge_12 = "Una nota que me dejo ese cliente";
+    string Escena3_dialoge_13 = "¿Qué tal tu primer día? Apostaría a que ha sido más fácil de lo que pensabas.";
+    string Escena3_dialoge_14 = "Si.. Ha sido... interesante. Algunos clientes son amables. Otros... son un poco raros.";
+    string Escena3_dialoge_15 = "Oh, eso es solo principio. Aquí verás de todo. Recuerda, sonríe siempre y mantén la distancia. No dejes que ningún cliente se te acerque demasiado, ¿de acuerdo?. Bueno, puedes irte ya termino yo todo lo que queda";
+    string Escena3_dialoge_16 = "Muachas gracias, buenas noches";
 
     //Conversacion 1 Escena 6 
 
@@ -102,9 +129,11 @@ public class dialogos : MonoBehaviour
 
         Convers_1 = false;
 
-        Escena3_dialoge_6 = "Pues ponme" + X + Y + Z + ", por favor preciosa.";
+        
 
         Convers_2 = true;
+
+        Yoshi_D_1 = false;
     }
 
     public void Clin()
@@ -194,7 +223,26 @@ public class dialogos : MonoBehaviour
 
     }
 
-    
+    public void Yoshiro()
+    {
+        if (Yoshiro_1)
+        {
+            Yoshi_D_1 = true;
+        }
+        if (Yoshiro_2)
+        {
+            Yoshi_D_2 = true;
+        }
+    }
+
+    IEnumerator Tiempo(int j) 
+    {
+        yield return new WaitForSeconds(j/2);
+        Nota_Yoshiro.SetActive(true);
+        yield return new WaitForSeconds(j);
+
+        leer = true;
+    }
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Space) && Convers_1) 
@@ -204,6 +252,176 @@ public class dialogos : MonoBehaviour
          Mv.Stop = false;
         }
 
+        if (Yoshi_D_1)
+        {
+            if (pagina == 0)
+            {
+                YoshiroObject.SetActive(false);
+                UsugiDialoge.text = Escena3_dialoge_1;
+                UsugiObject.SetActive(true);
+                pagina++;
+                Mv.Stop = true;
+
+            }
+            else if ( pagina == 1 && Input.GetKeyUp(KeyCode.Space))
+            {
+                YoshiroObject.SetActive(true);
+                YoshiroDialoge.text = Escena3_dialoge_2;
+                UsugiObject.SetActive(false);
+                pagina++;
+
+            }else if (pagina == 2 && Input.GetKeyUp(KeyCode.Space))
+            {
+                YoshiroObject.SetActive(false);
+                UsugiDialoge.text = Escena3_dialoge_3;
+                UsugiObject.SetActive(true);
+                pagina++;
+            }else if (pagina == 3 && Input.GetKeyUp(KeyCode.Space))
+            {
+                YoshiroObject.SetActive(true);
+                YoshiroDialoge.text = Escena3_dialoge_4;
+                UsugiObject.SetActive(false);
+                pagina++;
+            }else if (pagina == 4 && Input.GetKeyUp(KeyCode.Space))
+            {
+                YoshiroObject.SetActive(false);
+                UsugiDialoge.text = Escena3_dialoge_5;
+                UsugiObject.SetActive(true);
+                pagina++;
+
+            }
+            else if (pagina == 5 && Input.GetKeyUp(KeyCode.Space))
+            {
+                YoshiroObject.SetActive(true);
+
+                if (X == null && Y != null && Z != null)
+                {
+                    Escena3_dialoge_6 = "Pues ponme un " + Y + " y una " + Z + ", por favor preciosa.";
+                }
+                else if (Y == null && Z != null && X != null)
+                {
+                    Escena3_dialoge_6 = "Pues ponme un " + X + " y una " + Z + ", por favor preciosa.";
+                }
+                else if (Z == null && X != null && Y != null)
+                {
+
+                    Escena3_dialoge_6 = "Pues ponme un " + X + " y un " + Y + ", por favor preciosa.";
+
+                }
+                else if (X == null && Y == null && Z != null)
+                {
+
+                    Escena3_dialoge_6 = "Pues ponme sola un" + Z + ", por favor preciosa.";
+                }
+                else if (X == null && Y != null && Z == null)
+                {
+                    Escena3_dialoge_6 = "Pues ponme un " + Y + ", por favor preciosa.";
+                }
+                else if (X != null && Y == null && Z == null)
+                {
+                    Escena3_dialoge_6 = "Pues ponme un " + X + ", por favor preciosa.";
+                }
+                else
+                {
+                    Escena3_dialoge_6 = "Pues ponme " + X +", " + Y + " y "+ Z + ", por favor preciosa.";
+                }
+                YoshiroDialoge.text = Escena3_dialoge_6;
+                UsugiObject.SetActive(false);
+                pagina++;
+
+            }else if (pagina == 6 && Input.GetKeyUp(KeyCode.Space))
+            {
+                UsugiObject.SetActive(false);
+                YoshiroObject.SetActive(false);
+                Mv.Stop = false;
+                S = true;
+                pagina = 0;
+                Yoshiro_2 = true;
+                Yoshiro_1 = false;
+                Yoshi_D_1 = false;
+            }
+        }
+        if (T)
+        {
+            if (pagina == 0)
+            {
+                Mv.Stop = true;
+                UsugiObject.SetActive(false);
+                AyaneDialoge.text = Escena3_dialoge_7;
+                AyaneObject.SetActive(true);
+                pagina++;
+            }else if (pagina == 1 && Input.GetKeyUp(KeyCode.Space))
+            {
+                AyaneObject.SetActive(false);
+                
+                Mv.Stop = false;
+                pagina = 0;
+                T = false;
+            }
+        }
+
+        if (Yoshi_D_2)
+        {
+            if (pagina == 0)
+            {
+                Mv.Stop = true;
+                UsugiObject.SetActive(false);
+                YoshiroDialoge.text = Escena3_dialoge_8;
+                YoshiroObject.SetActive(true);
+                pagina++;
+                StartCoroutine(Tiempo(10));
+                
+                
+                
+            }
+            else if (pagina == 1 && leer)
+            {
+                UsugiObject.SetActive(false);
+                AyaneDialoge.text = Escena3_dialoge_11;
+                AyaneObject.SetActive(true);
+                pagina++;
+            }else if (pagina == 2  && Input.GetKeyUp(KeyCode.Space))
+            {
+                AyaneObject.SetActive(false);
+                UsugiDialoge.text = Escena3_dialoge_12;
+                UsugiObject.SetActive(true);
+                pagina++;
+            }else if (pagina == 3 && Input.GetKeyUp(KeyCode.Space))
+            {
+                UsugiObject.SetActive(false);
+                AyaneDialoge.text = Escena3_dialoge_13;
+                AyaneObject.SetActive(true);
+                pagina++;
+            }else if (pagina == 4 && Input.GetKeyUp(KeyCode.Space))
+            {
+                AyaneObject.SetActive(false);
+                UsugiDialoge.text = Escena3_dialoge_14;
+                UsugiObject.SetActive(true);
+                pagina++;
+            }
+            else if (pagina == 5 && Input.GetKeyUp(KeyCode.Space))
+            {
+                UsugiObject.SetActive(false);
+                AyaneDialoge.text = Escena3_dialoge_15;
+                AyaneObject.SetActive(true);
+                pagina++;
+            }
+            else if (pagina == 6 && Input.GetKeyUp(KeyCode.Space))
+            {
+                AyaneObject.SetActive(false);
+                UsugiDialoge.text = Escena3_dialoge_16;
+                UsugiObject.SetActive(true);
+                pagina++;
+            }else if (pagina == 7 && Input.GetKeyUp(KeyCode.Space))
+            {
+                AyaneObject.SetActive(false);
+                UsugiObject.SetActive(false);
+                Mv.Stop = false;
+                pagina = 0;
+                Yoshi_D_2 = false;
+                Salir = true;
+            }
+        }
         if (Convers_2 && dia_1)
         {
             if (Convers_2 && pagina == 0)

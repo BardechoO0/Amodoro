@@ -37,7 +37,7 @@ public class Cojer_objeto : MonoBehaviour
 
         if (inHand == false)
         {
-            if (collision.gameObject.layer == 7 || collision.gameObject.layer == 8 || collision.gameObject.layer == 9 || collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12 || collision.gameObject.layer ==14 || collision.gameObject.layer == 15 || collision.gameObject.layer == 16 || collision.gameObject.layer == 17 || collision.gameObject.layer == 18)
+            if (collision.gameObject.layer == 7 || collision.gameObject.layer == 8 || collision.gameObject.layer == 9 || collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12 || collision.gameObject.layer ==14 || collision.gameObject.layer == 15 || collision.gameObject.layer == 16 || collision.gameObject.layer == 17 || collision.gameObject.layer == 18 || collision.gameObject.layer == 21 )
             {
                 activo = true;
 
@@ -62,7 +62,7 @@ public class Cojer_objeto : MonoBehaviour
 
         if (inHand == false)
         {
-            if (collision.gameObject.layer == 7|| collision.gameObject.layer == 8|| collision.gameObject.layer == 9 || collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12 || collision.gameObject.layer == 14 || collision.gameObject.layer == 15 || collision.gameObject.layer == 16 || collision.gameObject.layer == 17 || collision.gameObject.layer == 18)
+            if (collision.gameObject.layer == 7|| collision.gameObject.layer == 8|| collision.gameObject.layer == 9 || collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12 || collision.gameObject.layer == 14 || collision.gameObject.layer == 15 || collision.gameObject.layer == 16 || collision.gameObject.layer == 17 || collision.gameObject.layer == 18 || collision.gameObject.layer == 21 )
             {
                 activo = false;
 

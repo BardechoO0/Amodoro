@@ -9,6 +9,8 @@ public class Instanciar : MonoBehaviour
 
     [SerializeField] GameObject[] Mirar;
 
+    [SerializeField] GameObject Yoshiro;
+
     public bool[] ocupado;
 
     int W;
@@ -16,6 +18,8 @@ public class Instanciar : MonoBehaviour
     int R;
 
     [SerializeField] GameObject[] Clientes2;
+
+    public int Z;
 
     public int NClientes;
     private void OnTriggerEnter(Collider other)
@@ -68,6 +72,15 @@ public class Instanciar : MonoBehaviour
         StartCoroutine(ZaWardo());
     }
 
+    public void Evento()
+    {
+        Z++;
+
+        if (Z == NClientes)
+        {
+            Instantiate(Yoshiro, transform.position, Quaternion.identity);
+        }
+    }
     // Update is called once per frame
     void Update()
     {

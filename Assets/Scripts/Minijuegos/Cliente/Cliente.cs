@@ -157,8 +157,14 @@ public class Cliente : MonoBehaviour
             Z = "Agua";
             dg.Z = Z;
         }
+        if (this.gameObject.layer == 19)
+        {
+            dg.Clin();
 
-        dg.Clin();
+        }else if (this.gameObject.layer == 20)
+        {
+            dg.Yoshiro();
+        }
     }
 
 
@@ -208,6 +214,7 @@ public class Cliente : MonoBehaviour
         }
         if (other.gameObject.tag == "Porta" && IC.lugar2 == true)
         {
+            other.GetComponent<Instanciar>().Evento();
             Destroy(gameObject);
         }
     }
@@ -242,7 +249,16 @@ public class Cliente : MonoBehaviour
 
     IEnumerator comer(int t)
     {
-        yield return new WaitForSeconds(t);
-        IC.lugar2 = true;
+        if (gameObject.layer == 20)
+        {
+            dg.Yoshiro();
+            yield return new WaitForSeconds(5);
+            IC.lugar2 = true;
+        }
+        else if (gameObject.layer == 19)
+        {
+            yield return new WaitForSeconds(t);
+            IC.lugar2 = true;
+        }
     }
 }
