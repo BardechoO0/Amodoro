@@ -68,19 +68,23 @@ public class dialogos : MonoBehaviour
     string Escena1_dialoge_1 = "Sigo pensando que este trabajo no es el mejor que podía tener, pero el horario es muy bueno y el sueldo no está tan mal comparado con otros trabajos que he buscado. Además, ¿cómo es que estos sitios tienen tanta fama? Nunca lo entenderé, la …";
     string Escena1_dialoge_2 = "¡Bienvenida! ¿Usagi, verdad? ¿Estás lista para tu primer día? No te preocupes, te enseñaré todo lo que necesitas saber.";
     string Escena1_dialoge_3 = "Gracias por el recibimiento, sé que suena un poco pesimista, pero estaba asustada de empezar a trabajar aquí.";
-    string Escena1_dialoge_4 = "Soy consciente que los Maid Café tienen mala fama y no puedo negar que el ambiente muchas veces es incómodo con ciertos clientes, tienes que saber cuidarse de ellos; la mayoría suele ser amable, pero alguno que otro querrá sobrepasarse contigo, es por eso que yo prefiero estar en cocina y tratar lo menos posible con la clientela, admiro a las que sí pueden estar de cara al público. Aún así, este lugar suele ser tranquilo, no vienen tantos clientes y seguro te las arreglas bien.";
+    string Escena1_dialoge_4 = "Soy consciente que los Maid Café tienen mala fama y no puedo negar que el ambiente muchas veces es incómodo con ciertos clientes, tienes que saber cuidarse de ellos. ";
+    string Escena1_dialoge_4_2 ="La mayoría suele ser amable, pero alguno que otro querrá sobrepasarse contigo, es por eso que yo prefiero estar en cocina y tratar lo menos posible con la clientela, admiro a las que sí pueden estar de cara al público. Aún así, este lugar suele ser tranquilo, no vienen tantos clientes y seguro te las arreglas bien.";
     string Escena1_dialoge_5 = "Puede que este no sea el mejor lugar, pero de verdad necesitaba el dinero que ofrecen, puedo con la presión, no hay ningún problema.";
     string Escena1_dialoge_6 = "Así se habla, sé que lo harás perfecto, se nota que eres muy buena. Cualquier problema que tengas, ven a hablar conmigo.";
     string Escena1_dialoge_7 = "Bien, empecemos con lo básico. Para moverse, solo hace falta que uses las teclas WASD: W para moverse hacia adelante, A hacia la izquierda, S hacia atrás y D para la derecha.";
 
     string Escena1_dialoge_7_2 = "Bien, sigueme";
-    string Escena1_dialoge_8 = "Esta es la zona de los batidos y cafés, situada justo al lado de la cocina. Aquí es donde prepararás los pedidos. Para hacer los batidos, solo bastará con ir al almacén; que te enseñaré más tarde, a por el ingrediente principal del batido que te pidan. Para pillar ingredientes, objetos, etc. Pulsa la tecla “E”. Para dejarlo dentro de la batidora, pulsa la tecla “F”, y para hacer el batido mantén “RMB” hasta que salga todo, después déjalo en la bandeja. Lo mismo con la cafetera, escoges el ingrediente necesario, lo añades y mantienes hasta que esté listo, y lo dejas en la bandeja. Si te piden agua, está en la nevera que tienes debajo de la barra, y si te piden algo de comida no te preocupes, ¿Ves esa ventanilla de ahí? Yo estaré en la cocina, solo hará falta que con RMB pulses la campanita. Cuando esté lista, te avisaré con esta misma y te la dejaré ahí apoyada.";
+    string Escena1_dialoge_8 = "Esta es la zona de los batidos y cafés, situada justo al lado de la cocina. Aquí es donde prepararás los pedidos. Para hacer los batidos, solo bastará con ir al almacén; que te enseñaré más tarde, a por el ingrediente principal del batido que te pidan. Para pillar ingredientes, objetos, etc. Pulsa la tecla “E”.";
+    string Escena1_dialoge_8_3 = " Para dejarlo dentro de la batidora, pulsa la tecla “F”, y para hacer el batido mantén “RMB” hasta que salga todo, después déjalo en la bandeja. Lo mismo con la cafetera, escoges el ingrediente necesario, lo añades y mantienes hasta que esté listo, y lo dejas en la bandeja.";
+    string Escena1_dialoge_8_4 =   " Si te piden agua, está en la nevera, y si te piden algo de comida no te preocupes, ¿Ves esa ventanilla de ahí? Yo estaré en la cocina, solo hará falta que con RMB pulses la campanita. Cuando esté lista, te avisaré con esta misma y te la dejaré ahí apoyada.";
 
     string Escena1_dialoge_8_2 = "Van por aqui";
     string Escena1_dialoge_9 = "Este es el comedor, donde atenderás a los clientes a medida que vayan llegando. Al tomarles el pedido, es importante saludarlos y que les llames “amo”, “mi señor” o como ellos quieran que les digas. Se que suena raro, pero es lo que nos hace únicos. Además, debes tener cuidado con no tardar en llevarles los pedidos.";
 
     string Escena1_dialoge_9_2 = "";
-    string Escena1_dialoge_10 = "Lo último que tengo que enseñarte es el almacén y cuarto de empleados. Aquí podrás pillar algunos de los ingredientes que te harán falta, y el sitio donde tenemos las taquillas donde guardamos los uniformes. Además tenemos un espejo para vernos antes de salir. ¿Sencillo, verdad? Pues esta es tu taquilla, cámbiate y empecemos tu primer servicio.";
+    string Escena1_dialoge_10 = "Lo último que tengo que enseñarte es el almacén y cuarto de empleados. Aquí podrás pillar algunos de los ingredientes que te harán falta, y el sitio donde tenemos las taquillas donde guardamos los uniformes.";
+     string Escena1_dialoge_10_2 =   " Además tenemos un espejo para vernos antes de salir. ¿Sencillo, verdad? Pues esta es tu taquilla, cámbiate y empecemos tu primer servicio.";
     
 
     // Conversacion Escena 3
@@ -119,7 +123,7 @@ public class dialogos : MonoBehaviour
     public string Escena6_dialoge_11 = "¿Qué quieres pedir, mi señor?";
     public string Escena6_dialoge_12 = "Quiero una MofuMofu Carrot y dos botellas de agua por favor, preciosa.";
     public string Escena6_dialoge_13 = "Enseguida. Nos vamos detrás del mostrador y le pasamos las ordenes a Ayane.";
-    public string Escena6_dialoge_14 = "¿Podrías traerme una caja de huevos del depósito cuando termines allí, por favor?\r\nHoy el día está más ajetreado que ayer.";
+    public string Escena6_dialoge_14 = "¿Podrías traerme una caja de huevos del depósito cuando termines allí, por favor? Hoy el día está más ajetreado que ayer.";
 
     void Start()
     {
@@ -239,6 +243,7 @@ public class dialogos : MonoBehaviour
     {
         yield return new WaitForSeconds(j/2);
         Nota_Yoshiro.SetActive(true);
+        YoshiroObject.SetActive(false);
         yield return new WaitForSeconds(j);
 
         leer = true;
@@ -376,6 +381,12 @@ public class dialogos : MonoBehaviour
             }
             else if (pagina == 1 && leer)
             {
+                AY.SetActive(true);
+                IB.objetivo = obj[6];
+                AY.transform.position = obj[6].transform.position;
+                IB.Look();
+                YoshiroObject.SetActive(false);
+                Nota_Yoshiro.SetActive(false);
                 UsugiObject.SetActive(false);
                 AyaneDialoge.text = Escena3_dialoge_11;
                 AyaneObject.SetActive(true);
@@ -457,66 +468,95 @@ public class dialogos : MonoBehaviour
             }
             else if (Convers_2 && pagina == 4 && Input.GetKeyUp(KeyCode.Space))
             {
+                AyaneObject.SetActive(true);
+                AyaneDialoge.text = Escena1_dialoge_4_2;
+                UsugiObject.SetActive(false);
+                pagina++;
+            }
+            else if (Convers_2 && pagina == 5 && Input.GetKeyUp(KeyCode.Space))
+            {
                 AyaneObject.SetActive(false);
                 UsugiDialoge.text = Escena1_dialoge_5;
                 UsugiObject.SetActive(true);
                 pagina++;
             }
-            else if (Convers_2 && pagina == 5 && Input.GetKeyUp(KeyCode.Space))
+            else if (Convers_2 && pagina == 6 && Input.GetKeyUp(KeyCode.Space))
             {
                 UsugiObject.SetActive(false);
                 AyaneDialoge.text = Escena1_dialoge_6;
                 AyaneObject.SetActive(true);
                 pagina++;
+                pagina++;
             }
-            else if (Convers_2 && pagina == 6 && Input.GetKeyUp(KeyCode.Space))
+            else if (Convers_2 && pagina == 8 && Input.GetKeyUp(KeyCode.Space))
             {
                 AyaneDialoge.text = Escena1_dialoge_7;
                 pagina++;
                 Mv.Stop = false;
             }
-            else if (Convers_2 && pagina == 7 && Input.GetKeyUp(KeyCode.W))
+            else if (Convers_2 && pagina == 9 && Input.GetKeyUp(KeyCode.W))
             {
                 AyaneDialoge.text = Escena1_dialoge_7_2;
                 pagina++;
                 IB.objetivo = obj[1];
             }
-            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[1].transform.position.x, 0, obj[1].transform.position.z) && Convers_2 && pagina == 8)
+            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[1].transform.position.x, 0, obj[1].transform.position.z) && Convers_2 && pagina == 10)
             {
                 AyaneDialoge.text = Escena1_dialoge_8;
                 pagina++;
 
             }
-            else if ((Convers_2 && pagina == 9 && Input.GetKeyUp(KeyCode.Space)))
+            else if (Convers_2 && pagina == 11 && Input.GetKeyUp(KeyCode.Space))
+            {
+                AyaneObject.SetActive(true);
+                AyaneDialoge.text = Escena1_dialoge_8_3;
+                UsugiObject.SetActive(false);
+                pagina++;
+            }
+            else if (Convers_2 && pagina == 12 && Input.GetKeyUp(KeyCode.Space))
+            {
+                AyaneObject.SetActive(true);
+                AyaneDialoge.text = Escena1_dialoge_8_4;
+                UsugiObject.SetActive(false);
+                pagina++;
+            }
+            else if ((Convers_2 && pagina == 13 && Input.GetKeyUp(KeyCode.Space)))
             {
 
                 IB.objetivo = obj[2];
                 AyaneDialoge.text = Escena1_dialoge_8_2;
                 pagina++;
             }
-            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[2].transform.position.x, 0, obj[2].transform.position.z) && Convers_2 && pagina == 10)
+            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[2].transform.position.x, 0, obj[2].transform.position.z) && Convers_2 && pagina == 14)
             {
                 AyaneDialoge.text = Escena1_dialoge_9;
                 pagina++;
             }
-            else if (Convers_2 && pagina == 11 && Input.GetKeyUp(KeyCode.Space))
+            else if (Convers_2 && pagina == 15 && Input.GetKeyUp(KeyCode.Space))
             {
                 IB.objetivo = obj[3];
                 AyaneDialoge.text = Escena1_dialoge_9_2;
                 pagina++;
             }
-            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[3].transform.position.x, 0, obj[3].transform.position.z) && Convers_2 && pagina == 12)
+            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[3].transform.position.x, 0, obj[3].transform.position.z) && Convers_2 && pagina == 16)
             {
                 AyaneDialoge.text = Escena1_dialoge_10;
                 pagina++;
             }
-            else if (Convers_2 && pagina == 13 && Input.GetKeyUp(KeyCode.Space))
+            else if (Convers_2 && pagina == 17 && Input.GetKeyUp(KeyCode.Space))
+            {
+                AyaneObject.SetActive(true);
+                AyaneDialoge.text = Escena1_dialoge_10_2;
+                UsugiObject.SetActive(false);
+                pagina++;
+            }
+            else if (Convers_2 && pagina == 18 && Input.GetKeyUp(KeyCode.Space))
             {
                 AyaneObject.SetActive(false);
                 IB.objetivo = obj[4];
                 pagina++;
             }
-            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[4].transform.position.x, 0, obj[4].transform.position.z) && Convers_2 && pagina == 14)
+            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[4].transform.position.x, 0, obj[4].transform.position.z) && Convers_2 && pagina == 19)
             {
                 
                 IB.objetivo = obj[5];
@@ -525,8 +565,8 @@ public class dialogos : MonoBehaviour
 
                 AY.transform.position = obj[5].transform.position;
 
-                IB = null;
-                Destroy(AY);
+                
+                AY.SetActive(false);
 
                 Convers_2 = false; pagina = 0;
             }

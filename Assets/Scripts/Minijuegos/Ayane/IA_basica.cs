@@ -5,8 +5,13 @@ public class IA_basica : MonoBehaviour
 {
     public Transform objetivo;
   private NavMeshAgent agent;
+
+    public Transform Usagi;
+
+    [SerializeField] Animator anmin;
     void Start()
     {
+        anmin.GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -14,5 +19,12 @@ public class IA_basica : MonoBehaviour
     void Update()
     {
         agent.SetDestination(objetivo.position);
+        anmin.SetFloat("Speed", agent.velocity.magnitude);
+    }
+
+
+    public void Look()
+    {
+        transform.LookAt(Usagi.position);
     }
 }

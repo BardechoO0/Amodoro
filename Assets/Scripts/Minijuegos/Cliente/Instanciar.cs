@@ -9,6 +9,8 @@ public class Instanciar : MonoBehaviour
 
     [SerializeField] GameObject[] Mirar;
 
+
+
     [SerializeField] GameObject Yoshiro;
 
     public bool[] ocupado;

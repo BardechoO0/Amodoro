@@ -1,12 +1,11 @@
 using System.Collections;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
-using UnityEditor.ShaderGraph.Drawing.Inspector.PropertyDrawers;
+
 using UnityEngine;
-using UnityEngine.XR;
+
 
 public class Cliente : MonoBehaviour
 {
-    public GameObject IMG;
+    [SerializeField] Animator anim;
     [SerializeField] Instaciador[] IT = new Instaciador[0];
     [SerializeField] Cojer_objeto cj;
     public int R;
@@ -41,9 +40,9 @@ public class Cliente : MonoBehaviour
 
     void Start()
     {
+        anim.GetComponent<Animator>();
         IC = GetComponent<IA_clientes>();
         Servido = false;
-        IMG.SetActive(false);
         sentado = false;
 
         N_batido = 1;
@@ -84,7 +83,6 @@ public class Cliente : MonoBehaviour
 
     public void llegar()
     {
-        IMG.SetActive(true);
         print("j");
         if (comida)
         {
@@ -236,19 +234,20 @@ public class Cliente : MonoBehaviour
 
         if (!comida && !BatidoCafe && !Agua)
         {
-            print("j");
-            StartCoroutine(comer(1));
+            
+            StartCoroutine(comer(2));
         }
 
         if(IC.lugar2 == false && IC.lugar1 == false)
         {
             sentado = true;
-            IMG.SetActive(true);
+            anim.SetBool("Sit", true);
         }
     }
 
     IEnumerator comer(int t)
     {
+        
         if (gameObject.layer == 20)
         {
             dg.Yoshiro();

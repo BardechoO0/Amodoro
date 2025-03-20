@@ -9,6 +9,8 @@ public class IA_clientes : MonoBehaviour
     public Transform Mirar;
     private NavMeshAgent agent;
 
+    [SerializeField] Animator anim;
+
     
     //private Animator animator;
 
@@ -22,6 +24,7 @@ public class IA_clientes : MonoBehaviour
 
     void Start()
     {
+        anim.GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         //animator = GetComponent<Animator>();
         lugar1 = true;
@@ -49,10 +52,13 @@ public class IA_clientes : MonoBehaviour
         else if (!lugar1 && lugar2)
         {
             agent.SetDestination(objetivo2.position);
+            anim.SetBool("Sit", false);
+
         }
         else
         {
             agent.SetDestination(objetivo.position);
+            anim.SetBool("Sit", false);
 
         }
 
