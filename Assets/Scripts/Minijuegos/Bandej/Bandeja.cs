@@ -20,6 +20,10 @@ public class Bandeja : MonoBehaviour
     float R;
 
     public bool minijuegoActivo;
+
+    public string Muertos = "Porta";
+
+    public bool X;
     void Start()
     {
         Ins = false;
@@ -48,6 +52,8 @@ public class Bandeja : MonoBehaviour
     {
         minijuegoActivo = false;
         x.value = 0f;
+
+        
     }
 
     public void Errar()
@@ -93,6 +99,11 @@ public class Bandeja : MonoBehaviour
 
             transform.localRotation= Quaternion.Euler(45 * R, 0, 0);
         }
+
+        if (X)
+        {
+            gameObject.tag = Muertos;
+        }
     }
 
     
@@ -103,6 +114,7 @@ public class Bandeja : MonoBehaviour
             IN = other.gameObject;
 
             IT = IN.GetComponent<Instaciador>();
+            
             gameObject.tag = IT.nombreTag;
             Ins = true;
 

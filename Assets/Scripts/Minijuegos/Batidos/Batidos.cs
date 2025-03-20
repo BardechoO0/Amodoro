@@ -119,7 +119,7 @@ public class Batidos : MonoBehaviour
 
         }
 
-        if (Input.GetMouseButton(2)&&Ingrediente_metido&&personaDentro) 
+        if (Input.GetMouseButton(1)&&Ingrediente_metido&&personaDentro) 
         {
 
             batir += 1*Time.deltaTime;

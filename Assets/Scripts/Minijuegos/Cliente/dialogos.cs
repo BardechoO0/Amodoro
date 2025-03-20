@@ -6,6 +6,9 @@ using UnityEngine.Rendering;
 
 public class dialogos : MonoBehaviour
 {
+
+    //Dias
+    public bool dia_1;
     //Parar, moviniento
     [SerializeField] Moverse Mv;
 
@@ -201,7 +204,7 @@ public class dialogos : MonoBehaviour
          Mv.Stop = false;
         }
 
-        if (Convers_2)
+        if (Convers_2 && dia_1)
         {
             if (Convers_2 && pagina == 0)
             {
@@ -306,13 +309,10 @@ public class dialogos : MonoBehaviour
 
                 IB = null;
                 Destroy(AY);
-                
-                pagina++;
-            }
-            else if (Convers_2 && pagina == 15)
-            {
+
                 Convers_2 = false; pagina = 0;
             }
+            
 
         }
     }

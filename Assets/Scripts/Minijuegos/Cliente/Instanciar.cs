@@ -29,7 +29,7 @@ public class Instanciar : MonoBehaviour
 
         ocupado = new bool[Asientos.Length];
 
-        Entran();
+       
 
         
 

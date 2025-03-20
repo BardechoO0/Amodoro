@@ -88,6 +88,15 @@ public class Cliente : MonoBehaviour
         print("j");
         if (comida)
         {
+            int R = Random.Range(0, 2);
+
+            if (R == 0) 
+            {
+                X = "Carrot Cake";
+            } else 
+            {
+                X = "Sakura Pie";
+            }
             if (IT[0].ocupado == false && IT[0] != null )
             {
                 IT[0].nombreTag = X;

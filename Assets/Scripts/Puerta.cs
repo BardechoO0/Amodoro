@@ -55,8 +55,9 @@ public class Puerta : MonoBehaviour
     {    
         yield return new WaitForSeconds(0.5f);
         act = false;
-        act_2 = true;
+        
         yield return new WaitForSeconds(5f);
+        act_2 = true;
         StartCoroutine(Cerrar());
     }
 
