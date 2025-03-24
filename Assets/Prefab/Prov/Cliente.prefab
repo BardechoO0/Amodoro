@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4492ed96f0caba4fae907dbbb8adfe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IMG: {fileID: 7915353489119640919}
+  anim: {fileID: 0}
   IT:
   - {fileID: 0}
   - {fileID: 0}

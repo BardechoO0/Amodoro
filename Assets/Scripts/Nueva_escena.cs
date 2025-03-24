@@ -1,6 +1,7 @@
-using Unity.VisualScripting;
+
 using UnityEngine;
-using static UnityEngine.EventSystems.EventTrigger;
+using UnityEngine.SceneManagement;
+
 
 public class Nueva_escena : MonoBehaviour
 {
@@ -32,8 +33,9 @@ public class Nueva_escena : MonoBehaviour
     {
         if (dentro && dg.Salir == true) {
 
-            print("adio Unity");
-        
+            SceneManager.LoadScene(2);
+
+
         }
     }
 }

@@ -8,7 +8,8 @@ public class Moverse : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+       
+        
         Stop = false;
     }
 

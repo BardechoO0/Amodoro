@@ -40,14 +40,14 @@ public class Puerta : MonoBehaviour
 
         if (act) 
         {
-            puerta.transform.Rotate(0, 2, 0);
+            puerta.transform.Rotate(0, 180*Time.deltaTime, 0);
 
             
         }
 
         if (act_2)
         {
-            puerta.transform.Rotate(0, -2, 0);
+            puerta.transform.Rotate(0, -180 * Time.deltaTime, 0);
         }
     }
 
