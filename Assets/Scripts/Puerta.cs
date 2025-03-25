@@ -5,6 +5,8 @@ public class Puerta : MonoBehaviour
 {
     [SerializeField] GameObject puerta;
 
+    [SerializeField] GameObject IMG;
+
     public bool dentro;
 
     public bool act;
@@ -13,6 +15,8 @@ public class Puerta : MonoBehaviour
     void Start()
     {
         GetComponent<Collider>();
+
+        IMG.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,6 +24,7 @@ public class Puerta : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             dentro = true;
+            IMG.SetActive(true);
         }
     }
 
@@ -28,6 +33,7 @@ public class Puerta : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             dentro = false;
+            IMG.SetActive(false);
         }
     }
     void Update()

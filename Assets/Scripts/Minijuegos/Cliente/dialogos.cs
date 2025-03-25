@@ -91,10 +91,11 @@ public class dialogos : MonoBehaviour
 
     string Escena1_dialoge_7_2 = "Bien, sigueme";
     string Escena1_dialoge_8 = "Esta es la zona de los batidos y cafés, situada justo al lado de la cocina. Aquí es donde prepararás los pedidos. Para hacer los batidos, solo bastará con ir al almacén; que te enseñaré más tarde, a por el ingrediente principal del batido que te pidan. Para pillar ingredientes, objetos, etc. Pulsa la tecla “E”.";
-    string Escena1_dialoge_8_3 = " Para dejarlo dentro de la batidora, pulsa la tecla “F”, y para hacer el batido mantén “RMB” hasta que salga todo, después déjalo en la bandeja. Lo mismo con la cafetera, escoges el ingrediente necesario, lo añades y mantienes hasta que esté listo, y lo dejas en la bandeja.";
-    string Escena1_dialoge_8_4 =   " Si te piden agua, está en la nevera, y si te piden algo de comida no te preocupes, ¿Ves esa ventanilla de ahí? Yo estaré en la cocina, solo hará falta que con RMB pulses la campanita. Cuando esté lista, te avisaré con esta misma y te la dejaré ahí apoyada.";
+    string Escena1_dialoge_8_3 = " Para dejarlo dentro de la batidora, pulsa la tecla “E”, y para hacer el batido mantén “RMB” hasta que salga todo, después déjalo en la bandeja. Lo mismo con la cafetera, escoges el ingrediente necesario, lo añades y mantienes hasta que esté listo, y lo dejas en la bandeja.";
+    string Escena1_dialoge_8_4 = " Si te piden agua, está en la nevera, y si te piden algo de comida no te preocupes, ¿Ves esa ventanilla de ahí? Yo estaré en la cocina, solo hará falta que con RMB pulses la campanita. Cuando esté lista, te avisaré con esta misma y te la dejaré ahí apoyada.";
+    string Escena1_dialoge_8_5 = "Cuando tengas la bandeja en la mano no pierdas el equilibrio, para mantenerlo utiliza la “Q” y la “R”. Si se te cae vuelve a pedir la comida en la ventanilla";
 
-    string Escena1_dialoge_8_2 = "Van por aqui";
+    string Escena1_dialoge_8_2 = "Ven por aqui";
     string Escena1_dialoge_9 = "Este es el comedor, donde atenderás a los clientes a medida que vayan llegando. Al tomarles el pedido, es importante saludarlos y que les llames “amo”, “mi señor” o como ellos quieran que les digas. Se que suena raro, pero es lo que nos hace únicos. Además, debes tener cuidado con no tardar en llevarles los pedidos.";
 
     string Escena1_dialoge_9_2 = "";
@@ -548,43 +549,50 @@ public class dialogos : MonoBehaviour
                 UsugiObject.SetActive(false);
                 pagina++;
             }
-            else if ((Convers_2 && pagina == 13 && Input.GetKeyUp(KeyCode.Space)))
+            else if (Convers_2 && pagina == 13 && Input.GetKeyUp(KeyCode.Space))
+            {
+                AyaneObject.SetActive(true);
+                AyaneDialoge.text = Escena1_dialoge_8_5;
+                UsugiObject.SetActive(false);
+                pagina++;
+            }
+            else if ((Convers_2 && pagina == 14 && Input.GetKeyUp(KeyCode.Space)))
             {
 
                 IB.objetivo = obj[2];
                 AyaneDialoge.text = Escena1_dialoge_8_2;
                 pagina++;
             }
-            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[2].transform.position.x, 0, obj[2].transform.position.z) && Convers_2 && pagina == 14)
+            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[2].transform.position.x, 0, obj[2].transform.position.z) && Convers_2 && pagina == 15)
             {
                 AyaneDialoge.text = Escena1_dialoge_9;
                 pagina++;
             }
-            else if (Convers_2 && pagina == 15 && Input.GetKeyUp(KeyCode.Space))
+            else if (Convers_2 && pagina == 16 && Input.GetKeyUp(KeyCode.Space))
             {
                 IB.objetivo = obj[3];
                 AyaneDialoge.text = Escena1_dialoge_9_2;
                 pagina++;
             }
-            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[3].transform.position.x, 0, obj[3].transform.position.z) && Convers_2 && pagina == 16)
+            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[3].transform.position.x, 0, obj[3].transform.position.z) && Convers_2 && pagina == 17)
             {
                 AyaneDialoge.text = Escena1_dialoge_10;
                 pagina++;
             }
-            else if (Convers_2 && pagina == 17 && Input.GetKeyUp(KeyCode.Space))
+            else if (Convers_2 && pagina == 18 && Input.GetKeyUp(KeyCode.Space))
             {
                 AyaneObject.SetActive(true);
                 AyaneDialoge.text = Escena1_dialoge_10_2;
                 UsugiObject.SetActive(false);
                 pagina++;
             }
-            else if (Convers_2 && pagina == 18 && Input.GetKeyUp(KeyCode.Space))
+            else if (Convers_2 && pagina == 19 && Input.GetKeyUp(KeyCode.Space))
             {
                 AyaneObject.SetActive(false);
                 IB.objetivo = obj[4];
                 pagina++;
             }
-            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[4].transform.position.x, 0, obj[4].transform.position.z) && Convers_2 && pagina == 19)
+            else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[4].transform.position.x, 0, obj[4].transform.position.z) && Convers_2 && pagina == 20)
             {
 
                 IB.objetivo = obj[5];
