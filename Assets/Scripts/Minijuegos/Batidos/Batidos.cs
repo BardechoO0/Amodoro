@@ -22,6 +22,8 @@ public class Batidos : MonoBehaviour
 
     [SerializeField] Cojer_objeto Cj;
 
+    [SerializeField] AudioSource AS;
+
     public int R;
 
     public float batir;
@@ -123,7 +125,7 @@ public class Batidos : MonoBehaviour
         {
 
             batir += 1*Time.deltaTime;
-
+            AS.volume = 0.5f;
             if (batir > 4) 
             {
                 Destroy(Vaso);
@@ -132,7 +134,11 @@ public class Batidos : MonoBehaviour
                 Ingrediente_metido = false;
                 batir = 0;
             }
-        
+
+        }
+        else
+        {
+            AS.volume = 0;
         }
     }
 }

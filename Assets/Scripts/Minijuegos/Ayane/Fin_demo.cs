@@ -5,6 +5,7 @@ public class Fin_demo : MonoBehaviour
 {
     [SerializeField] dialogos dg;
     public bool dentro;
+    [SerializeField] AudioSource SC;
     void Start()
     {
 
@@ -30,7 +31,7 @@ public class Fin_demo : MonoBehaviour
     {
         if (dentro)
         {
-            
+            SC.Play();
             dg.Fin_Demo.SetActive(true);
             Destroy(gameObject);
         }

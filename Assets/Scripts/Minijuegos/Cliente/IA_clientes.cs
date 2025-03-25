@@ -26,7 +26,7 @@ public class IA_clientes : MonoBehaviour
     {
         anim.GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
-        //animator = GetComponent<Animator>();
+        
         lugar1 = true;
         lugar2 = false;
         lugar3 = false;

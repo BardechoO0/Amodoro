@@ -78,7 +78,11 @@ public class dialogos : MonoBehaviour
     public bool Convers_3;
 
     public bool leer;
-    
+
+    //Sonido
+    [SerializeField] AudioSource Susto;
+    [SerializeField] AudioSource Hablar;
+    [SerializeField] AudioSource Cliente;
     
     string Escena1_dialoge_1 = "Sigo pensando que este trabajo no es el mejor que podía tener, pero el horario es muy bueno y el sueldo no está tan mal comparado con otros trabajos que he buscado. Además, ¿cómo es que estos sitios tienen tanta fama? Nunca lo entenderé, la …";
     string Escena1_dialoge_2 = "¡Bienvenida! ¿Usagi, verdad? ¿Estás lista para tu primer día? No te preocupes, te enseñaré todo lo que necesitas saber.";
@@ -280,6 +284,7 @@ public class dialogos : MonoBehaviour
             {
                 if (pagina == 0)
                 {
+                    
                     YoshiroObject.SetActive(false);
                     UsugiDialoge.text = Escena3_dialoge_1;
                     UsugiObject.SetActive(true);
@@ -289,6 +294,8 @@ public class dialogos : MonoBehaviour
                 }
                 else if (pagina == 1 && Input.GetKeyUp(KeyCode.Space))
                 {
+                    Hablar.Stop();
+                    Hablar.Play();
                     YoshiroObject.SetActive(true);
                     YoshiroDialoge.text = Escena3_dialoge_2;
                     UsugiObject.SetActive(false);
@@ -297,6 +304,7 @@ public class dialogos : MonoBehaviour
                 }
                 else if (pagina == 2 && Input.GetKeyUp(KeyCode.Space))
                 {
+                    Hablar.Stop();
                     YoshiroObject.SetActive(false);
                     UsugiDialoge.text = Escena3_dialoge_3;
                     UsugiObject.SetActive(true);
@@ -304,6 +312,8 @@ public class dialogos : MonoBehaviour
                 }
                 else if (pagina == 3 && Input.GetKeyUp(KeyCode.Space))
                 {
+                    Hablar.Stop();
+                    Hablar.Play();
                     YoshiroObject.SetActive(true);
                     YoshiroDialoge.text = Escena3_dialoge_4;
                     UsugiObject.SetActive(false);
@@ -311,6 +321,7 @@ public class dialogos : MonoBehaviour
                 }
                 else if (pagina == 4 && Input.GetKeyUp(KeyCode.Space))
                 {
+                    Hablar.Stop();
                     YoshiroObject.SetActive(false);
                     UsugiDialoge.text = Escena3_dialoge_5;
                     UsugiObject.SetActive(true);
@@ -319,6 +330,8 @@ public class dialogos : MonoBehaviour
                 }
                 else if (pagina == 5 && Input.GetKeyUp(KeyCode.Space))
                 {
+                    Hablar.Stop();
+                    Hablar.Play();
                     YoshiroObject.SetActive(true);
 
                     if (X == null && Y != null && Z != null)
@@ -359,6 +372,7 @@ public class dialogos : MonoBehaviour
                 }
                 else if (pagina == 6 && Input.GetKeyUp(KeyCode.Space))
                 {
+                    Hablar.Stop();
                     UsugiObject.SetActive(false);
                     YoshiroObject.SetActive(false);
                     Mv.Stop = false;
@@ -373,6 +387,8 @@ public class dialogos : MonoBehaviour
             {
                 if (pagina == 0)
                 {
+                    Hablar.Stop();
+                    Hablar.Play();
                     Mv.Stop = true;
                     UsugiObject.SetActive(false);
                     AyaneDialoge.text = Escena3_dialoge_7;
@@ -381,6 +397,7 @@ public class dialogos : MonoBehaviour
                 }
                 else if (pagina == 1 && Input.GetKeyUp(KeyCode.Space))
                 {
+                    Hablar.Stop();
                     AyaneObject.SetActive(false);
 
                     Mv.Stop = false;
@@ -405,6 +422,9 @@ public class dialogos : MonoBehaviour
                 }
                 else if (pagina == 1 && leer)
                 {
+                    Susto.Play(); 
+                    Hablar.Stop();
+                    Hablar.Play();
                     AY.SetActive(true);
                     IB.objetivo = obj[6];
                     AY.transform.position = obj[6].transform.position;
@@ -418,6 +438,7 @@ public class dialogos : MonoBehaviour
                 }
                 else if (pagina == 2 && Input.GetKeyUp(KeyCode.Space))
                 {
+                    Hablar.Stop();
                     AyaneObject.SetActive(false);
                     UsugiDialoge.text = Escena3_dialoge_12;
                     UsugiObject.SetActive(true);
@@ -425,6 +446,8 @@ public class dialogos : MonoBehaviour
                 }
                 else if (pagina == 3 && Input.GetKeyUp(KeyCode.Space))
                 {
+                    Hablar.Stop();
+                    Hablar.Play();
                     UsugiObject.SetActive(false);
                     AyaneDialoge.text = Escena3_dialoge_13;
                     AyaneObject.SetActive(true);
@@ -432,6 +455,7 @@ public class dialogos : MonoBehaviour
                 }
                 else if (pagina == 4 && Input.GetKeyUp(KeyCode.Space))
                 {
+                    Hablar.Stop();
                     AyaneObject.SetActive(false);
                     UsugiDialoge.text = Escena3_dialoge_14;
                     UsugiObject.SetActive(true);
@@ -439,6 +463,8 @@ public class dialogos : MonoBehaviour
                 }
                 else if (pagina == 5 && Input.GetKeyUp(KeyCode.Space))
                 {
+                    Hablar.Stop();
+                    Hablar.Play();
                     UsugiObject.SetActive(false);
                     AyaneDialoge.text = Escena3_dialoge_15;
                     AyaneObject.SetActive(true);
@@ -446,6 +472,7 @@ public class dialogos : MonoBehaviour
                 }
                 else if (pagina == 6 && Input.GetKeyUp(KeyCode.Space))
                 {
+                    Hablar.Stop();
                     AyaneObject.SetActive(false);
                     UsugiDialoge.text = Escena3_dialoge_16;
                     UsugiObject.SetActive(true);
@@ -474,7 +501,7 @@ public class dialogos : MonoBehaviour
             }
             else if (Convers_2 && new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[0].transform.position.x, 0, obj[0].transform.position.z) && pagina == 1)
             {
-
+                Hablar.Play();
                 UsugiObject.SetActive(false);
                 AyaneDialoge.text = Escena1_dialoge_2;
                 AyaneObject.SetActive(true);
@@ -483,6 +510,7 @@ public class dialogos : MonoBehaviour
             }
             else if (Convers_2 && pagina == 2 && Input.GetKeyUp(KeyCode.Space))
             {
+                Hablar.Stop();
                 AyaneObject.SetActive(false);
                 UsugiDialoge.text = Escena1_dialoge_3;
                 UsugiObject.SetActive(true);
@@ -490,6 +518,7 @@ public class dialogos : MonoBehaviour
             }
             else if (Convers_2 && pagina == 3 && Input.GetKeyUp(KeyCode.Space))
             {
+                Hablar.Play();
                 UsugiObject.SetActive(false);
                 AyaneDialoge.text = Escena1_dialoge_4;
                 AyaneObject.SetActive(true);
@@ -497,6 +526,8 @@ public class dialogos : MonoBehaviour
             }
             else if (Convers_2 && pagina == 4 && Input.GetKeyUp(KeyCode.Space))
             {
+                Hablar.Stop();
+                Hablar.Play();
                 AyaneObject.SetActive(true);
                 AyaneDialoge.text = Escena1_dialoge_4_2;
                 UsugiObject.SetActive(false);
@@ -504,6 +535,7 @@ public class dialogos : MonoBehaviour
             }
             else if (Convers_2 && pagina == 5 && Input.GetKeyUp(KeyCode.Space))
             {
+                Hablar.Stop();
                 AyaneObject.SetActive(false);
                 UsugiDialoge.text = Escena1_dialoge_5;
                 UsugiObject.SetActive(true);
@@ -511,6 +543,8 @@ public class dialogos : MonoBehaviour
             }
             else if (Convers_2 && pagina == 6 && Input.GetKeyUp(KeyCode.Space))
             {
+                Hablar.Stop();
+                Hablar.Play();
                 UsugiObject.SetActive(false);
                 AyaneDialoge.text = Escena1_dialoge_6;
                 AyaneObject.SetActive(true);
@@ -519,6 +553,7 @@ public class dialogos : MonoBehaviour
             }
             else if (Convers_2 && pagina == 8 && Input.GetKeyUp(KeyCode.Space))
             {
+                Hablar.Stop();
                 AyaneDialoge.text = Escena1_dialoge_7;
                 pagina++;
                 Mv.Stop = false;
@@ -531,12 +566,16 @@ public class dialogos : MonoBehaviour
             }
             else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[1].transform.position.x, 0, obj[1].transform.position.z) && Convers_2 && pagina == 10)
             {
+                Hablar.Stop();
+                Hablar.Play();
                 AyaneDialoge.text = Escena1_dialoge_8;
                 pagina++;
 
             }
             else if (Convers_2 && pagina == 11 && Input.GetKeyUp(KeyCode.Space))
             {
+                Hablar.Stop();
+                Hablar.Play();
                 AyaneObject.SetActive(true);
                 AyaneDialoge.text = Escena1_dialoge_8_3;
                 UsugiObject.SetActive(false);
@@ -544,6 +583,8 @@ public class dialogos : MonoBehaviour
             }
             else if (Convers_2 && pagina == 12 && Input.GetKeyUp(KeyCode.Space))
             {
+                Hablar.Stop();
+                Hablar.Play();
                 AyaneObject.SetActive(true);
                 AyaneDialoge.text = Escena1_dialoge_8_4;
                 UsugiObject.SetActive(false);
@@ -551,6 +592,8 @@ public class dialogos : MonoBehaviour
             }
             else if (Convers_2 && pagina == 13 && Input.GetKeyUp(KeyCode.Space))
             {
+                Hablar.Stop();
+                Hablar.Play();
                 AyaneObject.SetActive(true);
                 AyaneDialoge.text = Escena1_dialoge_8_5;
                 UsugiObject.SetActive(false);
@@ -558,29 +601,36 @@ public class dialogos : MonoBehaviour
             }
             else if ((Convers_2 && pagina == 14 && Input.GetKeyUp(KeyCode.Space)))
             {
-
+                Hablar.Stop();
                 IB.objetivo = obj[2];
                 AyaneDialoge.text = Escena1_dialoge_8_2;
                 pagina++;
             }
             else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[2].transform.position.x, 0, obj[2].transform.position.z) && Convers_2 && pagina == 15)
             {
+                Hablar.Stop();
+                Hablar.Play();
                 AyaneDialoge.text = Escena1_dialoge_9;
                 pagina++;
             }
             else if (Convers_2 && pagina == 16 && Input.GetKeyUp(KeyCode.Space))
             {
+                Hablar.Stop();
+                Hablar.Play();
                 IB.objetivo = obj[3];
                 AyaneDialoge.text = Escena1_dialoge_9_2;
                 pagina++;
             }
             else if (new Vector3(IB.transform.position.x, 0, IB.transform.position.z) == new Vector3(obj[3].transform.position.x, 0, obj[3].transform.position.z) && Convers_2 && pagina == 17)
             {
+                Hablar.Stop();
                 AyaneDialoge.text = Escena1_dialoge_10;
                 pagina++;
             }
             else if (Convers_2 && pagina == 18 && Input.GetKeyUp(KeyCode.Space))
             {
+                Hablar.Stop();
+                Hablar.Play();
                 AyaneObject.SetActive(true);
                 AyaneDialoge.text = Escena1_dialoge_10_2;
                 UsugiObject.SetActive(false);
@@ -588,6 +638,7 @@ public class dialogos : MonoBehaviour
             }
             else if (Convers_2 && pagina == 19 && Input.GetKeyUp(KeyCode.Space))
             {
+                Hablar.Stop();
                 AyaneObject.SetActive(false);
                 IB.objetivo = obj[4];
                 pagina++;
@@ -624,6 +675,8 @@ public class dialogos : MonoBehaviour
                 }
                 else if (U && pagina == 1 && Input.GetKeyDown(KeyCode.Space))
                 {
+                    Hablar.Stop();
+                    Hablar.Play();
                     UsugiObject.SetActive(false);
                     KyokoDialoge.text = Escena6_dialoge_2;
                     KyokoObject.SetActive(true);
@@ -631,6 +684,7 @@ public class dialogos : MonoBehaviour
                 }
                 else if (U && pagina == 2 && Input.GetKeyDown(KeyCode.Space))
                 {
+                    Hablar.Stop();
                     UsugiObject.SetActive(true);
                     UsugiDialoge.text = Escena6_dialoge_3;
                     KyokoObject.SetActive(false);
@@ -641,7 +695,8 @@ public class dialogos : MonoBehaviour
                 }
                 else if (U && pagina == 3 && Input.GetKeyDown(KeyCode.Space))
                 {
-
+                    Hablar.Stop();
+                    Hablar.Play();
                     UsugiObject.SetActive(false);
                     KyokoDialoge.text = Escena6_dialoge_4;
                     KyokoObject.SetActive(true);
@@ -650,6 +705,7 @@ public class dialogos : MonoBehaviour
                 }
                 else if (U && pagina == 4 && Input.GetKeyDown(KeyCode.Space))
                 {
+                    Hablar.Stop();
                     UsugiObject.SetActive(true);
                     UsugiDialoge.text = Escena6_dialoge_5;
                     KyokoObject.SetActive(false);
@@ -658,7 +714,8 @@ public class dialogos : MonoBehaviour
                 }
                 else if (U && pagina == 5 && new Vector3(obj[1].position.x,0, obj[1].position.z)== new Vector3(AY.transform.position.x, 0, AY.transform.position.z))
                 {
-                    
+                    Hablar.Stop();
+                    Hablar.Play();
                     UsugiObject.SetActive(false);
                     AyaneDialoge.text = Escena6_dialoge_6;
                     KyokoObject.SetActive(false);
@@ -667,6 +724,7 @@ public class dialogos : MonoBehaviour
                 }
                 else if (U && pagina == 6 && Input.GetKeyDown(KeyCode.Space))
                 {
+                    Hablar.Stop();
                     UsugiObject.SetActive(true);
                     UsugiDialoge.text = Escena6_dialoge_7;
                     KyokoObject.SetActive(false);
@@ -674,7 +732,7 @@ public class dialogos : MonoBehaviour
                     pagina++;
                 }else if (U && pagina == 7 && Input.GetKeyDown(KeyCode.Space))
                 {
-                    
+                    Hablar.Stop();
                     IB.objetivo = obj[2];
                     
                     UsugiObject.SetActive(false);
@@ -696,6 +754,8 @@ public class dialogos : MonoBehaviour
                 {
                     if (W2 && pagina==0)
                     {
+                        Hablar.Stop();
+                        Hablar.Play();
                         Mv.Stop = true;
                         UsugiObject.SetActive(false);
                         YoshiroDialoge.text = Escena6_dialoge_8;
@@ -704,31 +764,38 @@ public class dialogos : MonoBehaviour
 
                     }else if (W2 && pagina == 1 && Input.GetKeyDown(KeyCode.Space))
                     {
+                        Hablar.Stop();
                         UsugiObject.SetActive(true);
                         UsugiDialoge.text = Escena6_dialoge_9;
                         YoshiroObject.SetActive(false);
                         pagina++;
                     }else if (W2 && pagina == 2 && Input.GetKeyDown(KeyCode.Space))
                     {
+                        Hablar.Stop();
+                        Hablar.Play();
                         UsugiObject.SetActive(false);
                         YoshiroDialoge.text = Escena6_dialoge_10;
                         YoshiroObject.SetActive(true);
                         pagina++;
                     }else if (W2 && pagina == 3 && Input.GetKeyDown(KeyCode.Space))
                     {
+                        Hablar.Stop();
                         UsugiObject.SetActive(true);
                         UsugiDialoge.text = Escena6_dialoge_11;
                         YoshiroObject.SetActive(false);
                         pagina++;
                     }else if (W2 && pagina == 4 && Input.GetKeyDown(KeyCode.Space))
                     {
+                        Hablar.Stop();
+                        Hablar.Play();
                         UsugiObject.SetActive(false);
                         YoshiroDialoge.text = Escena6_dialoge_12;
                         YoshiroObject.SetActive(true);
                         pagina++;
                     }else if (W2 && pagina == 5 && Input.GetKeyDown(KeyCode.Space))
                     {
-                    UsugiObject.SetActive(true);
+                        Hablar.Stop();
+                        UsugiObject.SetActive(true);
                     UsugiDialoge.text = Escena6_dialoge_13;
                     YoshiroObject.SetActive(false);
                     pagina++;
@@ -747,12 +814,15 @@ public class dialogos : MonoBehaviour
                 { 
                     if (W3 && pagina == 0)
                     {
+                        Hablar.Stop();
+                        Hablar.Play();
                         Mv.Stop = true;
                         AyaneDialoge.text = Escena6_dialoge_14;
                         AyaneObject.SetActive(true);
                         pagina++;
                     }else if (W2 && pagina ==1  && Input.GetKeyDown(KeyCode.Space))
                     {
+                        Hablar.Stop();
                         Mv.Stop=false;
                         AyaneObject.SetActive(false);
                         Conejo.SetActive(true);
