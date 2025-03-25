@@ -32,6 +32,8 @@ public class Fin_demo : MonoBehaviour
         if (dentro)
         {
             SC.Play();
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
             dg.Fin_Demo.SetActive(true);
             Destroy(gameObject);
         }

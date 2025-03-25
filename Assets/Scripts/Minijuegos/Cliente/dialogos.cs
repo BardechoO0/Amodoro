@@ -4,7 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class dialogos : MonoBehaviour
 {
@@ -83,6 +83,8 @@ public class dialogos : MonoBehaviour
     [SerializeField] AudioSource Susto;
     [SerializeField] AudioSource Hablar;
     [SerializeField] AudioSource Cliente;
+
+    [SerializeField] Slider Musica;
     
     string Escena1_dialoge_1 = "Sigo pensando que este trabajo no es el mejor que podía tener, pero el horario es muy bueno y el sueldo no está tan mal comparado con otros trabajos que he buscado. Además, ¿cómo es que estos sitios tienen tanta fama? Nunca lo entenderé, la …";
     string Escena1_dialoge_2 = "¡Bienvenida! ¿Usagi, verdad? ¿Estás lista para tu primer día? No te preocupes, te enseñaré todo lo que necesitas saber.";
@@ -416,6 +418,7 @@ public class dialogos : MonoBehaviour
                     YoshiroObject.SetActive(true);
                     pagina++;
                     StartCoroutine(Tiempo(10));
+                    Musica.value = 0;
 
 
 
@@ -486,6 +489,7 @@ public class dialogos : MonoBehaviour
                     pagina = 0;
                     Yoshi_D_2 = false;
                     Salir = true;
+                    Musica.value = 0.5f; 
                 }
             }
         }

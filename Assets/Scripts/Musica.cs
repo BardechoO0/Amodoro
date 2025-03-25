@@ -10,11 +10,13 @@ public class Musica : MonoBehaviour
     [SerializeField] Slider musicSlider;
 
     [SerializeField] Slider Sound;
-    static public float Value = 1f;
+   static float Value = 0.5f;
+    public float x;
 
  
     void Start()
-    {      
+    {
+        musicSlider.value = Value;
         
     }
 
@@ -22,5 +24,7 @@ public class Musica : MonoBehaviour
     void Update()
     {
         musicSoucer.volume = musicSlider.value;
+        Value = musicSlider.value;
+        x = Value;
     }
 }
